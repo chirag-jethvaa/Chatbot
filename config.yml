@@ -1,0 +1,14 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline: "pretrained_embeddings_spacy"
+case_sensitive: False
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy
+  - name: FormPolicy
+  - name: TwoStageFallbackPolicy
+    nlu_threshold: 0.1

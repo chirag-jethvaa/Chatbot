@@ -1,0 +1,34 @@
+[
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.28250716564384304
+    }
+  },
+  {
+    "text": "who is the head of department of computer science department?",
+    "intent": "head_of_department",
+    "intent_prediction": {
+      "name": "head_of_department_with_department",
+      "confidence": 0.4666380873424422
+    }
+  },
+  {
+    "text": "Who are you?",
+    "intent": "i_am_robot",
+    "intent_prediction": {
+      "name": "fees_without_department",
+      "confidence": 0.32414536892853313
+    }
+  },
+  {
+    "text": "What's your name?",
+    "intent": "i_am_robot",
+    "intent_prediction": {
+      "name": "fees_without_department",
+      "confidence": 0.29370277738544787
+    }
+  }
+]

@@ -1,0 +1,99 @@
+slots:
+
+  department:
+    type: text
+
+  location:
+    type: text
+
+  institute:
+    type: unfeaturized
+
+  course:
+    type: unfeaturized
+
+  university:
+    type: unfeaturized
+
+
+
+entities:
+  - location
+  - institute
+  - course
+  - university
+
+forms:
+  - form_programs
+  - form_about_fees
+
+intents:
+  - greet
+  - agree
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - i_am_robot
+  - chirag
+  - available_programs
+  - fees
+  - inform
+  - about_university
+  - out_of_scope
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_out_of_scope
+
+- utter_i_am_robot
+- action_hello_world_chirag
+- utter_ask_institute
+- utter_ask_course
+- utter_about_university
+- utter_available_programs_submit
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_out_of_scope:
+  - text: Sorry, I can’t handle that request.
+
+
+  utter_i_am_robot:
+  - text: "I am CHARUBOT."
+
+
+  utter_ask_institute:
+  - text: Please mention which institute.
+
+  utter_ask_course:
+  - text: For which course?
+
+  utter_available_programs_submit:
+  - text: Courses available in {institute} are...
+
+  utter_about_university:
+  - text: "Charotar University of Science and Technology (CHARUSAT) is established under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of UGC Act 1956.[4][5] Earlier campus was known as Education Campus Changa until 2009. CHARUSAT was accredited with grade A by NAAC in 2016."
+
+  utter_about_fees_submit:
+  - text: "Fees for the course: {course} in institute: {institute} is, 1,30,000"
