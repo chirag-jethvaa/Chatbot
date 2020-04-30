@@ -6,8 +6,10 @@ case_sensitive: False
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
-  - name: MemoizationPolicy
+  - name: AugmentedMemoizationPolicy
   - name: KerasPolicy
+    validation_split: 0.1
+    epochs: 200
   - name: MappingPolicy
   - name: FormPolicy
   - name: TwoStageFallbackPolicy
