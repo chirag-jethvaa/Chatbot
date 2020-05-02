@@ -1,99 +1,165 @@
-slots:
-
-  department:
-    type: text
-
-  location:
-    type: text
-
-  institute:
-    type: unfeaturized
-
-  course:
-    type: unfeaturized
-
-  university:
-    type: unfeaturized
-
-
-
-entities:
-  - location
-  - institute
-  - course
-  - university
-
-forms:
-  - form_programs
-  - form_about_fees
-
-intents:
-  - greet
-  - agree
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - i_am_robot
-  - chirag
-  - available_programs
-  - fees
-  - inform
-  - about_university
-  - out_of_scope
-
 actions:
-- utter_greet
+- -utter_ask_typeofhostel
+- action_hello_world_chirag
+- utter_about_fees_submit
+- utter_about_girlshostel
+- utter_about_hostel
+- utter_about_university
+- utter_ask_course
+- utter_ask_hostel
+- utter_ask_institute
+- utter_available_programs_submit
 - utter_cheer_up
 - utter_did_that_help
-- utter_happy
 - utter_goodbye
-- utter_out_of_scope
-
+- utter_greet
+- utter_happy
 - utter_i_am_robot
-- action_hello_world_chirag
-- utter_ask_institute
-- utter_ask_course
-- utter_about_university
-- utter_available_programs_submit
-
-templates:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_out_of_scope:
-  - text: Sorry, I can’t handle that request.
-
-
-  utter_i_am_robot:
-  - text: "I am CHARUBOT."
-
-
-  utter_ask_institute:
-  - text: Please mention which institute.
-
-  utter_ask_course:
-  - text: For which course?
-
-  utter_available_programs_submit:
-  - text: Courses available in {institute} are...
+- utter_out_of_scope
+- utter_internet_info
+- utter_lab_ce_it
+- utter_lab_pharma
+- utter_lab_mech
+- utter_lab_physio
+- utter_lab_civil
+- utter_lab_ec
+- utter_lab_electrical
+- utter_food
+entities:
+- course
+- hostel
+- institute
+- location
+- university
+forms:
+- form_about_fees
+- form_programs
+- form_about_hostels
+- form_lab_info
+intents:
+- greet
+- inform
+- about_hostel
+- agree
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- i_am_robot
+- chirag
+- available_programs
+- fees
+- about_university
+- out_of_scope
+- internet_info
+- lab_info
+- food_availability
+responses:
+  utter_about_fees_submit:
+  - text: 'Fees for the course: {course} in institute: {institute} is, 1,30,000'
+  utter_about_girlshostel:
+  - text: "Girls hostels are included inside the premises only\n For further info you can contact -91-9925691113 / 9825293046
+       \n Thank you:) Any other information you need to known..plz mention"
+  utter_about_hostel:
+  - text: "Here are your Lists of the boys hostels which are in walking distance to charusat..
+      \n 1. Nisarg hostel -099790 99888\n 2. Shreedeep hostel -09727765994\n 3. Royal care\
+      \ hostel -09427041818\n4. Darshan hostel -099095 23236 \n 5. Ashirvad hostel -094265\
+      \ 95837\n 6. Sahajanand Hostel\n Thank you:) Any other information you need to known..plz mention"
 
   utter_about_university:
-  - text: "Charotar University of Science and Technology (CHARUSAT) is established under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of UGC Act 1956.[4][5] Earlier campus was known as Education Campus Changa until 2009. CHARUSAT was accredited with grade A by NAAC in 2016."
+  - text: "Charotar University of Science and Technology (CHARUSAT) is established
+      under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants
+      Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of
+      UGC Act 1956.[4][5] Earlier campus was known as Education Campus Changa until
+      2009. CHARUSAT was accredited with grade A by NAAC in 2016.\n Thank you:) Any other information you need to known..plz mention"
+  utter_ask_course:
+  - text: For which course?
+  utter_ask_hostel:
+  - text: Ok. then for which hostel girls or boys you want to see?
+  utter_ask_institute:
+  - text: Please mention which institute.
+  utter_available_programs_submit:
+  - text: Courses available in {institute} are...
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: "Bye"
+  utter_greet:
+  - text: Hey! How may I help you?
+  utter_happy:
+  - text: Great carry on!
+  utter_i_am_robot:
+  - text: I am CHARUBOT.
+  utter_out_of_scope:
+  - text: Sorry, I can’t handle that request.
+  utter_internet_info:
+  - text: "charusat is providing unlimited data for students.\n Along with that it also provides high speed data facilities like sophos is providing data with bandwidth around 250 Hz.
+       \n Thank you:) Any other information you need to known..plz mention"
+  utter_lab_ce_it:
+  - text: "AS u all known that it is very emerging field nowadays we have labs like
+       \n 1. AR Lab \n 2. VR Lab \n 3. Mac lab and many more...\n Also it has research labs too whom ever is interested
+       \n Thank you:) Any other information you need to known..plz mention"
+  utter_lab_pharma:
+  - text: "This is also a vast field in which it include.. \n 1. Pharmaceutics Labs
+     \n 2. Pharmacology Lab \n 3. Biotecnology Lab \n 4. Pharmaceutical Analytical Lab
+     \n 5. Medicinal chemistry Lab etc..
+     \n Thank you:) Any other information you need to known..plz mention"
+  utter_lab_physio:
+  - text: "In this field it includes..\n 1. Motion analysis and research Lab
+         \n 2. Human anatomy LAb \n 3. Human Physiology/Physics Lab etc...
+         \n It also contains \n 1. Dept of women's health physio
+         \n 2. Dept of musculoskeletal physio \n 3. Dept of neuro physio
+         \n 4. Dept of paediatric physio \n 5. Dept of cardiorespiratory physio
+         \n 6. Dept of electrotherapy \n 7. Dept of exercise therapy and many more...
+         \n Thank you:) Any other information you need to known..plz mention"
+  utter_lab_mech:
+  - text: "This is very vast field in which it includes..\n 1. fluid mechanics Lab
+        \n 2. Material testing Lab \n 3. CAD-CAM Lab \n 4. Heat and Mass tranfer Lab
+        \n 5. Thermal Lab \n 6. MatLab \n 7. IC engine Lab and many more...
+        \n Thank you:) Any other information you need to known..plz mention"
 
-  utter_about_fees_submit:
-  - text: "Fees for the course: {course} in institute: {institute} is, 1,30,000"
+  utter_lab_civil:
+  - text: "It includes..\n 1. Fluid Mechanics Lab \n 2. Material Testing Lab \n 3. Concrete Lab \n 4. Hydraulic Lab
+         \n 5. Surveying Lab \n 6. Structural engeering Lab and many more...
+         \n Thank you:) Any other information you need to known..plz mention"
+
+  utter_lab_ec:
+  - text: "I includes..\n 1. Digital system design Lab \n 2. Microprocessor and interfacing Lab
+         \n 3. Embedded systems design with IOT Lab \n 4. Control system Lab
+         \n Thank you:) Any other information you need to known..plz mention"
+
+  utter_lab_electrical:
+  - text: "It includes.. \n 1. Electrical machines Lab \n 2. Power electronics Lab \n 3.Electrical and electronics measurements Lab
+         \n 4. Power system Lab \n 5. Microprocessor and application Lab \n 6. Digital electronics Lab
+         \n Thank you:) Any other information you need to known..plz mention"
+
+  utter_food:
+  - text: "There are many canteens available for the best food facilities like HariOm ,Iceburg etc..
+        \n Thank you:) Any other information you need to known..plz mention"
+
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 0
+slots:
+  course:
+    type: unfeaturized
+    auto_fill: false
+  department:
+    type: text
+  hostel:
+    type: unfeaturized
+    auto_fill: false
+  institute:
+    type: unfeaturized
+    auto_fill: false
+  location:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  university:
+    type: unfeaturized
+    auto_fill: false
