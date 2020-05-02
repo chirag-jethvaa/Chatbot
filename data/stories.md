@@ -77,6 +77,7 @@
   - form_about_fees
   - form{"name":"form_about_fees"}
   - form{"name":null}
+  - action_restart
 
 ## form for fees happy path
  * greet
@@ -85,3 +86,4 @@
   - form_about_fees
   - form{"name":"form_about_fees"}
   - form{"name":null}
+  - action_restart
