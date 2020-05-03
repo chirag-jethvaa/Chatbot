@@ -155,7 +155,6 @@ slots:
     auto_fill: false
   institute:
     type: unfeaturized
-    auto_fill: false
   location:
     type: text
   requested_slot:
