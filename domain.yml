@@ -1,99 +1,350 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- agree
+- greet
+- out_of_scope
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- i_am_robot
+- available_programs
+- fees
+- inform
+- about_university
+- about_hostel
+- internet_info
+- lab_info
+- food_availability
+- about_facility
+- about_institute
+- admission_process
+entities:
+- institute
+- course
+- university
+- qualification
+- field
+- degree
+- sex
 slots:
-
-  department:
-    type: text
-
-  location:
-    type: text
-
-  institute:
-    type: unfeaturized
-
   course:
     type: unfeaturized
-
+  degree:
+    type: unfeaturized
+  field:
+    type: unfeaturized
+  institute:
+    type: unfeaturized
+  qualification:
+    type: unfeaturized
+  sex:
+    type: unfeaturized
   university:
     type: unfeaturized
-
-
-
-entities:
-  - location
-  - institute
-  - course
-  - university
-
-forms:
-  - form_programs
-  - form_about_fees
-
-intents:
-  - greet
-  - agree
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - i_am_robot
-  - chirag
-  - available_programs
-  - fees
-  - inform
-  - about_university
-  - out_of_scope
-
+responses:
+  utter_about_arip:
+  - text: Ashok & Rita Patel Institute of Physiotherapy started its first academic
+      session in the year of 2009-10. The evaluation system is based on Cumulative
+      Grade Point Average (CGPA) system and total credits to earn a Bachelor of Physiotherapy
+      degree has 240 credits and Master of Physiotherapy degree has 100 credits.
+  utter_about_cips:
+  - text: Charotar institute of paramedical sciences is one of the constituent institute
+      of CHARUSAT. It was established in 2016 with the aim of providing excellent/quality
+      education in the field of health care. At CIPS we aim to create next generation
+      health care professionals through quality education, extensive Clinical training
+      and community services.We believe not only in creating skilled professional,
+      but also in creating compassionate human being with empathy towards patients
+      which is very important quality in health care delivery.
+  utter_about_cmpica:
+  - text: Smt. Chandaben Mohanbhai Patel Institute of Computer Applications (CMPICA),
+      Faculty of Computer Science and Applications (MCA) is a constituent institute/department
+      of CHARUSAT.It is offering a two-year full-time MCA Lateral programme, a two-year
+      full-time Master of Science in Information Technology (M.Sc.(IT)) programme,
+      a three-year full-time Bachelor of Computer Applications (BCA) programme, a
+      three-year full-time Bachelor of Science in Information Technology (B.Sc.(IT))
+      programme and a Doctor of Philosophy (Ph. D.) programme.
+  utter_about_cspit:
+  - text: Chandubhai S Patel Institute of Technology, is the first institute established
+      in year 2000 at Education Campus, Changa (now CHARUSAT). The institute is managed
+      through a think tank of academician, scientists, engineers and professionals
+      from all parts of the world. Started with 240 seats with four Bachelor Degree
+      Engineering Programs in the year 2000, the institute now has total intake of
+      720 seats in 6 programs of Bachelor Degree and 180 seats of Post Graduate Degree.
+  utter_about_depstar:
+  - text: Devang Patel Institute of Advance Technology and Research-(DEPSTAR) is most
+      recent institute, established under CHARUSAT. The institute is managed through
+      a think tank of technocrats, administrators, scientists and engineers, educationalist,
+      businessmen, stakeholders and other well-wishers from all parts of the world.
+      The institute has total intake of 300 Seats.
+  utter_about_facilities:
+  - text: Their are many facilites avaliable like Gym,Cricket ground,Volleyboll ground,
+      Footboll ground,Basketball ground,Libraries,120 acres of lush green campus,Central
+      lawn, Indoor games like Badminton,Chess,Carrom ,Table Tennis and many more.
+  utter_about_fees_course:
+  - text: 'Fees for the course: {course} in institute: {institute} is, 1,30,000 ...(course)'
+  utter_about_fees_degree:
+  - text: 'Fees for the course: {degree} in institute: {institute} is, 1,30,000 ...(degree)'
+  utter_about_fees_field:
+  - text: 'Fees for the course: {field} in institute: {institute} is, 1,30,000 ...(field)'
+  utter_about_girlshostel:
+  - text: Girls hostels are included inside the premises only For further info you
+      can contact -91-9925691113 / 9825293046 Thank you:) Any other information you
+      need to known..plz mention
+  utter_about_hostel:
+  - text: Here are your Lists of the boys hostels which are in walking distance to
+      charusat.. 1. Nisarg hostel -099790 99888 2. Shreedeep hostel -09727765994 3.
+      Royal care hostel -094270418184. Darshan hostel -099095 23236  5. Ashirvad hostel
+      -094265 95837 6. Sahajanand Hostel Thank you:) Any other information you need
+      to known..plz mention
+  utter_about_iiim:
+  - text: Indukaka Ipcowala Institute of Management (I2IM) a constituent of Charotar
+      University of Science and Technology (CHARUSAT) has been established under patronage
+      from IPCO Industries – a business house of repute.I2IM started imparting management
+      education from the academic year 2006–07 through the MBA Program approved by
+      the All India Council for Technical Education (AICTE).The Institute has been
+      striving to make the education contemporary and relevant to the current and
+      future global needs of the globe.The training at I2IM is oriented to meet the
+      emerging opportunities in tune with cutting–edge technologies through Unique
+      Learner-Centric Pedagogy and Enhanced Emphasis on Self–Management.
+  utter_about_mtin:
+  - text: CHARUSAT has established Manikaka Topawala Institute of Nursing (Formerly
+      known as Charotar Institute of Nursing) in the year 2009 with the student intake
+      of 40. In the year 2012 student intake was enhanced to 60. In the year 2011
+      Institute launched New program General Nursing and Midwifery with the student
+      intake of 40. In 2014 PG program was launched in 5 specialties (Medical surgical
+      nursing, Child health nursing, Mental Health nursing, Obstetrics and gynecology
+      nursing and Community health nursing) with intake of 4 seats in each specialties.
+      To foster the research work Institute established Ph.D. program in 2011.The
+      institute has been set up with the primary aim of meeting the requirement of
+      nurses at various hospitals and institutes of the state, nation and worldwide.
+  utter_about_pdpias:
+  - text: The P D Patel Institute of Applied Sciences (PDPIAS) is one amongst the
+      constellation of colleges in the CHARUSAT Campus. It was launched in the year
+      2007 to impart education and conduct research in emerging areas of sciences
+      such as, Biosciences, Physical Sciences, Chemical Sciences and Mathematical
+      Sciences. A number of sponsored research projects are currently in progress
+      and few are in the pipeline.
+  utter_about_rpcp:
+  - text: Ramanbhai Patel College of Pharmacy (RPCP) is a constituent Institute of
+      Charotar University of Science and Technology (CHARUSAT). RPCP was established
+      in the year 2004 with a view to promote excellence in Pharmacy Education and
+      to prepare young talent to meet the challenges of Industrial Pharmacy and Pharmacy
+      Practice.The Institute has the patronage of Zydus Cadila Health Care Ltd; patronized
+      by Shri Pankaj Patel, CMD, Zydus Cadila Healthcare Ltd to commemorate his father,
+      Late Shri Ramanbhai Patel A Visionary Entrepreneur and a Philanthropist. M.Pharm
+      Programs at RPCP are executed under the auspices of T. P. Patel Centre for PG
+      studies in Pharmacy.The centre in patronized by Shri Jagdishbhai Patel and Shri
+      H. T. Patel and their families to monumentalize their father, Late Shri T. P.
+      Patel.
+  utter_about_university:
+  - text: Charotar University of Science and Technology (CHARUSAT) is established
+      under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants
+      Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of
+      UGC Act 1956.Earlier campus was known as Education Campus Changa until 2009.
+      CHARUSAT was accredited with grade A by NAAC in 2016.
+  utter_adm_bba_undergraduate:
+  - text: "Eligibity criteria for BBA.\n    1. 10 + 2 Pattern and Std. 12th Commerce\
+      \ Stream.\n    2. 10 + 2 Pattern and Std. 12th Art Stream (English as subject)\n\
+      Admission of total 60 seats of BBA course is done on the basis of merit list\
+      \ prepared according to the marks obtained by the applicants. Application form\
+      \ for BBA/Dual Degree course are to be downloaded from the University website,\
+      \ forms are also available during office hours at CMPICA, Changa."
+  utter_adm_bscit_undergraduate:
+  - text: A Student must have passed the 12th standard (or equivalent) examination(Science
+      stream (with A or B group)) with English as a subject (Preferable in First Attempt).Admission
+      of 60 seats in BSC. IT course is done on the basis of merit list prepared according
+      to the marks obtained by the applicants.
+  utter_adm_computeraplication_undergraduate:
+  - text: A Student must have passed the 12th standard (or equivalent) examination(Commerce/Science(with
+      A or B group)) with English as a subject (Preferable in First Attempt). Admission
+      of 60 seats in BCA course is done on the basis of merit list prepared according
+      to the marks obtained by the applicants. For Dual Degree course 12th should
+      be done in Science stream.Application form for BCA/Dual Degree course are to
+      be downloaded from the University website, forms are also available during office
+      hours at CMPICA, Changa.
+  utter_adm_engineering_undergraduate:
+  - text: "I. Eligibility Criteria - As per ACPC \n    1. 10 + 2 Pattern and Std.\
+      \ 12th from Science Stream.\n    2. Candidate should appear in GUJCET of the\
+      \ current admission year.\n\nII. Govt. quota seats will be filled by ACPC and\
+      \ Management quota seats will be filled by University. In 25% seats, 15% seats\
+      \ are filled under NRI sponsored quota and 10% seats are filled under Management\
+      \ quota.\n\nIII. Seat Distribution\n  CSPIT:\n      Mechanical engineering -\
+      \ 90 seats  Govt. Quota,30 seats Management Quota. \n      Civil engineering\
+      \ - 90 seats  Govt. Quota,30 seats Management Quota.\n      Computer engineering\
+      \ - 90 seats  Govt. Quota,12 seats for general management Quota(10%),18 seats\
+      \ for NRI Quota(15%). \n      IT engineering - 90 seats  Govt. Quota,12 seats\
+      \ for general management Quota(10%),18 seats for NRI Quota(15%).\n      Electrical\
+      \ engineering - 90 seats  Govt. Quota,30 seats Management Quota.\n      Electrical\
+      \ and Communication engineering - 90 seats  Govt. Quota,30 seats Management\
+      \ Quota.\n  DEPSTAR:\n      Computer engineering - 90 seats  Govt. Quota,12\
+      \ seats for general management Quota(10%),18 seats for NRI Quota(15%).\n   \
+      \   Computer Science engineering - 90 seats  Govt. Quota,12 seats for general\
+      \ management Quota(10%),18 seats for NRI Quota(15%).\n      IT engineering -\
+      \ 45 seats  Govt. Quota,6 seats for general management Quota(10%),9 seats for\
+      \ NRI Quota(15%)."
+  utter_adm_nursing/physio_undergraduate:
+  - text: "I. Eligibility Criteria.\n    1. 10 + 2 Pattern and Std. 12th from Science\
+      \ Stream.\n\n\nII. Distribution of seats.\n    B.Sc (Nursing) - 45 seats Govt.\
+      \ Quota, 15 seats  Management Quota.\n    GNM - 30 seats Govt. Quota,10 seats\
+      \ Management Quota.\n    BPT - 85 seats Govt. Quota,9 seats Management Quota.\n\
+      \n\nIII. Admission Procedure.\n    Admission procedure is as per norms and rules\
+      \ defined by Admission Committee for Gujarat Professional Nursing & Allied Medical\
+      \ Education Courses, Govt. of Gujarat, Gandhinagar.\n        1. Admissions are\
+      \ on merit basis\n        2. No donation or capitation fees are demanded for\
+      \ any Admission.\n        3. Admission will be under taken as per the rules\
+      \ decided by Admission Committee for Gujarat Professional Nursing & Allied Medical\
+      \ Education Courses.\n    Accordingly, 85% seats fill up by Admission Committee\
+      \ for Professional Medical Educational Courses and 15% seats will be filled\
+      \ by University. These 15% seats are filled up under Management quota."
+  utter_adm_pharmacy_undergraduate:
+  - text: "I. Eligibility Criteria - As per ACPC\n    1. 10 + 2 Pattern and Std. 12th\
+      \ from Science Stream.\n    2. Candidate should appear in GUJCET of the current\
+      \ admission year.\n  B.Pharm total 120 seats.\n    Govt. Quota @ 75% of Intake\
+      \ - 90 seats\n    Management Quota @ 25% of Intake - 30 seats\n\n\nII. Admission\
+      \ Procedure-\n    Govt. seats will be fill up by ACPC. Management and NRI quota\
+      \ admission is on merit basis."
+  utter_ask_course:
+  - text: For which course?
+  utter_ask_field:
+  - text: Please provide a field name
+  utter_ask_institute:
+  - text: Please mention which institute.
+  utter_ask_qualification:
+  - text: please select/provide the level of program.
+  utter_ask_sex:
+  - text: Ok. then for which hostel girls or boys you want to see?
+  utter_available_programs:
+  - text: (course) program
+  utter_available_programs_course:
+  - text: course
+  utter_available_programs_degree:
+  - text: degree
+  utter_available_programs_postgraduate:
+  - text: postgraduate
+  utter_available_programs_undergraduate:
+  - text: undergraduate
+  utter_available_programs_with_institute:
+  - image: ./hist.png
+    text: Program with institute uttered.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_food:
+  - text: There are many canteens available for the best food facilities like HariOm
+      ,Iceburg etc.. Thank you:) Any other information you need to known..plz mention
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great carry on!
+  utter_i_am_robot:
+  - text: I am CHARUBOT.
+  utter_internet_info:
+  - text: charusat is providing unlimited data for students. Along with that it also
+      provides high speed data facilities like sophos is providing data with bandwidth
+      around 250 Hz. Thank you:) Any other information you need to known..plz mention
+  utter_lab_ce_it:
+  - text: AS u all known that it is very emerging field nowadays we have labs like
+      1. AR Lab  2. VR Lab  3. Mac lab and many more... Also it has research labs
+      too whom ever is interested Thank you:) Any other information you need to known..plz
+      mention
+  utter_lab_civil:
+  - text: It includes.. 1. Fluid Mechanics Lab  2. Material Testing Lab  3. Concrete
+      Lab  4. Hydraulic Lab 5. Surveying Lab  6. Structural engeering Lab and many
+      more... Thank you:) Any other information you need to known..plz mention
+  utter_lab_ec:
+  - text: I includes.. 1. Digital system design Lab  2. Microprocessor and interfacing
+      Lab 3. Embedded systems design with IOT Lab  4. Control system Lab Thank you:)
+      Any other information you need to known..plz mention
+  utter_lab_electrical:
+  - text: It includes..  1. Electrical machines Lab  2. Power electronics Lab  3.Electrical
+      and electronics measurements Lab 4. Power system Lab  5. Microprocessor and
+      application Lab  6. Digital electronics Lab Thank you:) Any other information
+      you need to known..plz mention
+  utter_lab_mech:
+  - text: This is very vast field in which it includes.. 1. fluid mechanics Lab 2.
+      Material testing Lab  3. CAD-CAM Lab  4. Heat and Mass tranfer Lab 5. Thermal
+      Lab  6. MatLab  7. IC engine Lab and many more... Thank you:) Any other information
+      you need to known..plz mention
+  utter_lab_pharma:
+  - text: This is also a vast field in which it include..  1. Pharmaceutics Labs 2.
+      Pharmacology Lab  3. Biotecnology Lab  4. Pharmaceutical Analytical Lab 5. Medicinal
+      chemistry Lab etc.. Thank you:) Any other information you need to known..plz
+      mention
+  utter_lab_physio:
+  - text: In this field it includes.. 1. Motion analysis and research Lab 2. Human
+      anatomy LAb  3. Human Physiology/Physics Lab etc... It also contains  1. Dept
+      of women's health physio 2. Dept of musculoskeletal physio  3. Dept of neuro
+      physio 4. Dept of paediatric physio  5. Dept of cardiorespiratory physio 6.
+      Dept of electrotherapy  7. Dept of exercise therapy and many more... Thank you:)
+      Any other information you need to known..plz mention
+  utter_other_field:
+  - text: For admission of these you have to go through offline process,For more information
+      contact respective institutes.
+  utter_out_of_scope:
+  - text: Sorry, I can’t handle that request.
 actions:
+- utter_other_field
+- utter_adm_bba_undergraduate
+- utter_adm_bscit_undergraduate
+- utter_adm_computeraplication_undergraduate
+- utter_adm_engineering_undergraduate
+- utter_adm_pharmacy_undergraduate
+- utter_adm_nursing/physio_undergraduate
+- utter_about_facilities
+- utter_about_cspit
+- utter_about_depstar
+- utter_about_iiim
+- utter_about_pdpias
+- utter_about_cmpica
+- utter_about_rpcp
+- utter_about_arip
+- utter_about_cips
+- utter_about_mtin
 - utter_greet
 - utter_cheer_up
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
 - utter_out_of_scope
-
 - utter_i_am_robot
-- action_hello_world_chirag
 - utter_ask_institute
 - utter_ask_course
+- utter_ask_qualification
 - utter_about_university
-- utter_available_programs_submit
-
-templates:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_out_of_scope:
-  - text: Sorry, I can’t handle that request.
-
-
-  utter_i_am_robot:
-  - text: "I am CHARUBOT."
-
-
-  utter_ask_institute:
-  - text: Please mention which institute.
-
-  utter_ask_course:
-  - text: For which course?
-
-  utter_available_programs_submit:
-  - text: Courses available in {institute} are...
-
-  utter_about_university:
-  - text: "Charotar University of Science and Technology (CHARUSAT) is established under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of UGC Act 1956.[4][5] Earlier campus was known as Education Campus Changa until 2009. CHARUSAT was accredited with grade A by NAAC in 2016."
-
-  utter_about_fees_submit:
-  - text: "Fees for the course: {course} in institute: {institute} is, 1,30,000"
+- utter_available_programs
+- utter_ask_field
+- utter_ask_sex
+- utter_about_girlshostel
+- utter_available_programs_course
+- utter_available_programs_degree
+- utter_available_programs_undergraduate
+- utter_available_programs_postgraduate
+- utter_available_programs_with_institute
+- utter_about_fees_course
+- utter_about_fees_degree
+- utter_about_fees_field
+- utter_internet_info
+- utter_lab_ce_it
+- utter_lab_pharma
+- utter_about_hostel
+- utter_lab_mech
+- utter_lab_physio
+- utter_lab_civil
+- utter_lab_ec
+- utter_lab_electrical
+- utter_food
+forms:
+- form_programs
+- form_about_fees
+- form_about_institute
+- form_about_admission
+- form_about_hostels
+- form_lab_info

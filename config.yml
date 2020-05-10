@@ -7,7 +7,7 @@ case_sensitive: False
 # https://rasa.com/docs/rasa/core/policies/
 policies:
   - name: MemoizationPolicy
-  - name: KerasPolicy
+  - name: TEDPolicy
   - name: MappingPolicy
   - name: FormPolicy
   - name: TwoStageFallbackPolicy
