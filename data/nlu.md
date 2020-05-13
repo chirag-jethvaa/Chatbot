@@ -201,22 +201,8 @@
 
 
 ##intent:placement_company_info
-- which companies frequently visiting for placement in [CHARUSAT](university)?
-- which top companies frequently visiting for placement in [CHARUSAT](university)?
-- which top companies frequently visiting for placement in [CSPIT](institute)?
-- which top compaines frequently visiting for placement in [cmpica](institute)?
-- which top compaines frequently visiting for placement in [pdpias](institute)?
-- which top compaines frequently visiting for placement in [rpcp](institute)?
-- recruiter Compaines in [CSPIT](institute)?
-- recruiter Compaines in [cmpica](institute)?
-- recruiter Compaines in [pdpias](institute)?
-- recruiter Compaines in [depstar](institute)?
-- can you please give the list of compaines which visiting for placement in charusat?
-- give the list of compaines which visiting for recruitment in [CSPIT](institute)?
-- give the list of compaines which visiting for recruitment in [cmpica](institute)?
-- give the list of compaines which visiting for recruitment in [pdpias](institute)?
-- give the list of compaines which visiting for recruitment in [depstar](institute)?
-
+- which compaines visiting for placement in charusat?
+- compaines visiting for recruitment in charusat university?
 
 ## intent: inform
 

@@ -95,7 +95,4 @@
   
 ## form for recruiter_company
  *placement_company_info
-  - form_about_placement_company
-  - form{"name":"form_about_placement_company"} 
-  - form{"name":null}
-  - action_restart
+    - utter_placement_compaines_details

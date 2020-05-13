@@ -179,6 +179,9 @@ responses:
   utter_placement_company_rpcp:
   - text: Eva Hospital,Intas,Alembic Pharma,ALKEM,SUN pharma,Cadila,Cipla,Torrent
       Pharma and many more compaines visiting for recruitment process in RPCP
+
+  utter_placement_compaines_details:
+  - text: top compaines like TCS,Samsung,Byju's,SOPHOS,Reliance,Ford,ESSAR,L&T,Indian Navy,Bajaj,Axis Bank,Alembic Pharma,Cadila,Torrent Pharma and many more compaines visiting for placement in CHARUSAT
 actions:
 - -utter_ask_typeofhostel
 - action_hello_world_chirag
@@ -206,21 +209,22 @@ actions:
 - utter_lab_ec
 - utter_lab_electrical
 - utter_food
-- utter_placement_statastics_CE
-- utter_placement_statastics_IT
-- utter_placement_statastics_ME
-- utter_placement_statastics_Civil
+- utter_placement_statistics_CE
+- utter_placement_statistics_IT
+- utter_placement_statistics_ME
+- utter_placement_statistics_Civil
 - utter_placement_company_cspit
 - utter_placement_company_depstar
 - utter_placement_company_pdpias
 - utter_placement_company_cmpica
 - utter_placement_company_i2im
 - utter_placement_company_rpcp
-- utter_placement_statastics_EC
-- utter_placement_statastics_Electrical
-- utter_placement_statastics_pdpias
-- utter_placement_statastics_cmpica
-- utter_placement_statastics_not_known
+- utter_placement_statistics_EC
+- utter_placement_statistics_Electrical
+- utter_placement_statistics_pdpias
+- utter_placement_statistics_cmpica
+- utter_placement_statistics_not_known
+- utter_placement_compaines_details
 forms:
 - form_about_fees
 - form_programs

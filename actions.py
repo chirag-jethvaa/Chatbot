@@ -192,23 +192,23 @@ class Actiononplacement(FormAction):
         field = tracker.get_slot('field')
         course = tracker.get_slot('course')
         if (field == "computer applications"):
-            dispatcher.utter_template('utter_placement_statastics_cmpica', tracker)
+            dispatcher.utter_template('utter_placement_statistics_cmpica', tracker)
         elif (field == "applied sciences"):
-            dispatcher.utter_template('utter_placement_statastics_pdpias', tracker)
+            dispatcher.utter_template('utter_placement_statistics_pdpias', tracker)
         elif(field=="management"):
-            dispatcher.utter_template('utter_placement_statastics_i2im',tracker)
+            dispatcher.utter_template('utter_placement_statistics_i2im',tracker)
         elif (course == "ce" or course == "it" or course == "cs"):
-            dispatcher.utter_template("utter_placement_statastics_CE", tracker)
+            dispatcher.utter_template("utter_placement_statistics_CE", tracker)
         elif (course == 'me'):
-            dispatcher.utter_template('utter_placement_statastics_ME', tracker)
+            dispatcher.utter_template('utter_placement_statistics_ME', tracker)
         elif (course == 'cl'):
-            dispatcher.utter_template('utter_placement_statastics_Civil', tracker)
+            dispatcher.utter_template('utter_placement_statistics_Civil', tracker)
         elif (course == 'ec'):
-            dispatcher.utter_template('utter_placement_statastics_EC', tracker)
+            dispatcher.utter_template('utter_placement_statistics_EC', tracker)
         elif (course == 'ee'):
-            dispatcher.utter_template('utter_placement_statastics_Electrical', tracker)
+            dispatcher.utter_template('utter_placement_statistics_Electrical', tracker)
         else:
-            dispatcher.utter_template('utter_placement_statastics_not_known',tracker)
+            dispatcher.utter_template('utter_placement_statistics_not_known',tracker)
         return []
 
     def slot_mapping(self) -> Dict[Text, Union[Dict, List[Dict]]]:
