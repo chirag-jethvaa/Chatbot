@@ -181,36 +181,40 @@ class Actiononplacement(FormAction):
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
-        return ["course","institute"]
+        if tracker.get_slot('course'):
+            return ['course']
+        elif tracker.get_slot('field') == "engineering":
+            return ["course", 'field']
+        else:
+            return ['field']
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any], ) -> List[Dict]:
+        field = tracker.get_slot('field')
         course = tracker.get_slot('course')
-        institute=tracker.get_slot('institute')
-        if(institute=='depstar'):
-            if(course == 'Computer Engineering' or course == 'Information Technology' or course == 'Computer Science'):
-                dispatcher.utter_template('utter_placement_statastics_depstar',tracker)
-            else:
-                dispatcher.utter_template('utter_placement_statastics_depstar_wrong_input', tracker)
-        elif (course == 'Computer Engineering' and institute=='Chandubhai S Patel Institute of Technology'):
-            dispatcher.utter_template('utter_placement_statastics_CE', tracker)
-        elif (course == 'Information Technology' and institute=="Chandubhai S Patel Institute of Technology"):
-            dispatcher.utter_template('utter_placement_statastics_IT', tracker)
-        elif (course == 'Mechanical Engineering' and institute=="Chandubhai S Patel Institute of Technology"):
+        if (field == "computer applications"):
+            dispatcher.utter_template('utter_placement_statastics_cmpica', tracker)
+        elif (field == "applied sciences"):
+            dispatcher.utter_template('utter_placement_statastics_pdpias', tracker)
+        elif(field=="management"):
+            dispatcher.utter_template('utter_placement_statastics_i2im',tracker)
+        elif (course == "ce" or course == "it" or course == "cs"):
+            dispatcher.utter_template("utter_placement_statastics_CE", tracker)
+        elif (course == 'me'):
             dispatcher.utter_template('utter_placement_statastics_ME', tracker)
-        elif (course == 'Civil Engineering' and institute=="Chandubhai S Patel Institute of Technology"):
+        elif (course == 'cl'):
             dispatcher.utter_template('utter_placement_statastics_Civil', tracker)
-        elif (course == 'Electronics and communication' and institute=="Chandubhai S Patel Institute of Technology"):
+        elif (course == 'ec'):
             dispatcher.utter_template('utter_placement_statastics_EC', tracker)
-        elif (course == 'Electrical Engineering' and institute=="Chandubhai S Patel Institute of Technology"):
+        elif (course == 'ee'):
             dispatcher.utter_template('utter_placement_statastics_Electrical', tracker)
-        elif (institute=="pdpias"):
-            dispatcher.utter_template('utter_placement_statastics_pdpias',tracker)
+        else:
+            dispatcher.utter_template('utter_placement_statastics_not_known',tracker)
         return []
 
     def slot_mapping(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
-            "course": self.from_entity(entity="course", intent="inform"),
-            "institute": self.from_entity(entity="institute", intent="inform"),
+            "field": self.from_entity(entity="field", intent="inform"),
+            "course":self.from_entity(entity="course",intent="inform")
         }
 
 class Actiononplacementcompany(FormAction):

@@ -30,6 +30,7 @@ entities:
 - university
 - institue
 - institur
+- field
 slots:
   course:
     type: unfeaturized
@@ -48,6 +49,8 @@ slots:
   university:
     type: unfeaturized
     auto_fill: false
+  field:
+    type: unfeaturized
 responses:
   utter_about_fees_submit:
   - text: 'Fees for the course: {course} in institute: {institute} is, 1,30,000'
@@ -76,6 +79,8 @@ responses:
   - text: Please mention which institute.
   utter_available_programs_submit:
   - text: Courses available in {institute} are...
+  utter_ask_field:
+    - text: Please provide a field name.
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -136,24 +141,24 @@ responses:
   - text: "There are many canteens available for the best food facilities like HariOm\
       \ ,Iceburg etc.. \n Thank you:) Any other information you need to known..plz\
       \ mention"
-  utter_placement_statastics_CE:
-  - text: "Placement Statastics in CE department is 100%"
-  utter_placement_statastics_IT:
-  - text: "Placement Statastics in IT department is 100%"
-  utter_placement_statastics_ME:
-  - text: Placement Statastics in ME department is 87%
-  utter_placement_statastics_Civil:
-  - text: Placement Statastics in Civil department is 80%
-  utter_placement_statastics_EC:
-  - text: Placement Statastics in EC department is 84.84%
-  utter_placement_statastics_Electrical:
-  - text: "Placement Statastics in Electrical department is 82%"
-  utter_placement_statastics_pdpias:
-  - text: "Placement Statastics in {course} in {institute} is 80%"
-  utter_placement_statastics_depstar:
-  - text: "Placement Statastics in {course} in {institute} is 100%"
-  utter_placement_statastics_depstar_wrong_input:
-  - text: "Please select the correct course for this {institute} i.e. CSE,CE,IT"
+  utter_placement_statistics_CE:
+  - text: "Placement Statistics in {course} department is 100%"
+  utter_placement_statistics_ME:
+  - text: Placement Statistics in {course} department is 87%
+  utter_placement_statistics_Civil:
+  - text: Placement Statistics in Civil department is 80%
+  utter_placement_statistics_EC:
+  - text: Placement Statistics in EC department is 84.84%
+  utter_placement_statistics_Electrical:
+  - text: "Placement Statistics in Electrical department is 82%"
+  utter_placement_statistics_pdpias:
+  - text: "Placement Statistics in {field} is 80%"
+  utter_placement_statistics_not_known:
+  - text: "Sorry, We don't have any placement information for this {field}"
+  utter_placement_statistics_cmpica:
+  - text: "Placement Statistics in {field} is 80%"
+  utter_placement_statistics_i2im:
+  - text: "placement Statistics in {field} is 100%"
   utter_placement_company_depstar:
   - text: top compaines like Samsung,TCS,Byju's,crest data system,einfochips,ford,indian
       navy,Nirma,Meditab,Morris Garages,Torrent Power and many more compaines are
@@ -214,6 +219,8 @@ actions:
 - utter_placement_statastics_EC
 - utter_placement_statastics_Electrical
 - utter_placement_statastics_pdpias
+- utter_placement_statastics_cmpica
+- utter_placement_statastics_not_known
 forms:
 - form_about_fees
 - form_programs

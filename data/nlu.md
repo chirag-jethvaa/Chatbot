@@ -172,45 +172,32 @@
 - How much if i do from [Chandubhai S Patel](institute)?
 
 ## intent:placement_info
-- what is the placement statastics?
-- what is the placement statastics in [Computer Engineering](course) branch?
-- what is the placement statastics in [Mechanical Engineering](course) branch?
-- what is the placement statastics in [Mechanical](course:Mechanical Engineering) branch?
-- what is the placement statastics in [ME](course:Mechanical Engineering) branch?
-- what is the placement statastics in [me](course:Mechanical Engineering) branch?
-- what is the placement statastics in [Civil Engineering](course) branch?
-- what is the placement statastics in [CL](course:Civil Engineering) branch?
-- what is the placement statastics in [civil](course:Civil Engineering) branch?
-- what is the placement statastics in [cl](course:Civil Engineering) branch?
-- what is the placement statastics in [Information Technology](course) branch?
-- what is the placement statastics in [IT](course:Information Technology) branch?
-- what is the placement statastics in [it](course:Information Technology) branch?
-- what is the placement statastics in [Electronics and communication](course) branch?
-- what is the placement statastics in [EC](course:Electronics and communication) branch?
-- what is the placement statastics in [ec](course:Electronics and communication) branch?
-- what is the placement statastics in [Electrical Engineering](course) branch?
-- what is the placement statastics in [Electrical](course:Electrical Engineering) branch?
-- what is the placement statastics in [electrical](course:Electrical Engineering) branch?
-- placement in [Computer Engineering](course) branch?
-- placement in [Computer Engineering](course)?
-- can i have placement information?
-- placement in [Civil Engineering](course) branch?
-- placement in [Civil Engineering](course)?
-- can you tell me about placement in charusat?
-- placement in [Information Technology](course) branch?
-- placement in [Information Technology](course)?
-- placement in [Mechanical Engineering](course) branch?
-- placement in [Mechanical Engineering](course)?
-- placement in [Electrical Engineering](course) branch?
-- placement in [Electrical Engineering](course)?
-- placement in [EC](course:Electronics and communication) branch?
-- placement in [EC](course:Electronics and communication)?
-- placement in [pdpias](institue)?
-- what is the placement statastics in [pdpias](institute)?
-- placement statastics in [depstar](institute)?
-- placement statastics in [depstar](institute) for [CE](course) branch?
-- placement statastics in [depstar](institute) for [CSE](course) branch?
-- placement statastics in [depstar](institute) for [IT](course) branch?
+- what is the placement statistics?
+- what is the placement statistics in [ce](course) branch?
+- what is the placement statistics in [it](course) branch?
+- what is the placement statistics in [me](course) branch?
+- what is the placement statistics in [cl](course) branch?
+- what is the placement statistics in [ee](course) branch?
+- what is the placement statistics in [ec](course) branch?
+- what is the placement statistics in [cs](course) branch?
+- placement in [ce](course) branch?
+- placement in [CE](course:ce) branch?
+- placement in [me](course) branch?
+- placement in [ME](course:me) branch?
+- placement in [cl](course) branch?
+- placement in [CL](course:cl) branch?
+- placement in [ee](course) branch?
+- placement in [EE](course:ee) branch?
+- placement in [ec](course) branch?
+- placement in [EC](course:ec) branch?
+- placement in [cs](course) branch?
+- placement in [CS](course:cs) branch?
+- placement in [engineering](field)?
+- placement in [computer applications](field)?
+- placement in [applied sciences](field)?
+- placement in [management](field)?
+- placement in [nursing](field)?
+- placement in [medical](field)?
 
 
 ##intent:placement_company_info
@@ -231,86 +218,185 @@
 - give the list of compaines which visiting for recruitment in [depstar](institute)?
 
 
-## intent:inform
-- [Ahmedabad](location)
-- [Vadodara](location)
-- [Anand](location)
-- [Vallabh Vidhyanagar](location)
-- [Nadiad](location)
-- [CHANGA](location)
-- [Khambhat](location)
-- [Petlad](location)
-- [Vadtal](location)
-- [Computer Science](course)
-- [cse](course:Computer Science)
-- [CSE](course:Computer Science)
-- [Computer Engineering](course)
-- [ce](course:Computer Engineering)
-- [CE](course:Computer Engineering)
-- [Electrical Engineering](course)
-- [ee](course:Electrical Engineering)
-- [EE](course:Electrical Engineering)
-- [Civil Engineering](course)
-- [civil](course:Civil Engineering)
-- [cl](course:Civil Engineering)
-- [CL](course:Civil Engineering)
-- [Electronics and communication](course)
-- [ec](course:Electronics and communication)
-- [EC](course:Electronics and communication)
-- [Information Technology](course)
-- [it](course:Information Technology)
-- [IT](course:Information Technology)
-- [Mechanical Engineering](course)
-- [me](course:Mechanical Engineering)
-- [ME](course:Mechanical Engineering)
-- [Physiotherapy](course)
-- [physio](course:Physiotherapy)
-- [PHYSIO](course:Physiotherapy)
-- [pharmacy](course)
+## intent: inform
+
+- [cs](course)
+- [computer](course:ce)
+- [Computer Science](course:cs)
+- [cse](course)
+- [Computer Science and Engineering](course:cse)
+- [Computer Engineering](course:ce)
+- [ce](course)
+- [Civil Engineering](course:cl)
+- [civil](course:cl)
+- [cl](course)
+- [Electronics and communication](course:ec)
+- [ec](course)
+- [Information Technology](course:it)
+- [it](course)
+- [Mechanical Engineering](course:me)
+- [mechanical](course:me)
+- [me](course)
+- [Electrical Engineering](course:ee)
+- [electrical](course:ee)
+- [ee](course)
+
+- [Pharmaceutical Technology](course:pt)
+- [Regulatory Affairs](course:ra)
+- [Pharmaceutical Quality Assurance)](course:pqa)
+- [Pharmacy Practice](course:pp)
+- [Pharmacology](course:pc)
+
+- [Medical Radiology and Imaging Technology](course:mrit)
+- [Operation Theater and Anesthesia Technology](course:otat)
+- [Optometry](course:optometry)
+- [Medical Technology](course:mt)
+- [Medical-Surgical Nursing](course:msn)
+- [Community Health](course:ch)
+- [Mental Health](course:mh)
+- [Obstetrics & Gynecological](course:og)
+- [Child Health](course:chh)
+- [Musculoskeletal Sciences](course:ms)
+- [Neurological Sciences](course:ns)
+- [Cardiopulmonary Sciences](course:cas)
+- [Paediatrics](course:pae)
+- [Rehabilitation](course:rehab)
+- [Sports Sciences](course:ss)
+- [Mathematics](course:maths)
+- [maths](course)
+- [Physics](course)
+- [Advanced Organic Chemistry](course)
+- [Biotechnology](course)
+- [Microbiology](course)
+- [Biochemistry](course)
+- [Medical Laboratory Technology](course:mlt)
+- [Clinical Hypnosis](course)
+- [Hospital Administration](course:ha)
+- [General Nursing & Midwifery ](course)
+- [PostGraduateDiploma](degree:pgd)
+- [Biotechnology](course:biotech)
+- [Microbiology](course:microbio)
+- [Biochemistry](course:biochem)
+- [physics](course)
+- [Advanced Organic Chemistry](course:aoc)
+- [general nursing](course)
+
+- [btech](degree)
+- [mtech](degree)
+- [msc](degree)
+- [bsc](degree)
+- [mpt](degree)
+- [m.sc](degree:msc)
+- [b.sc](degree:bsc)
+- [b.tech](degree:btech)
+- [m.tech](degree:mtech)
+- [b. tech](degree)
+- [m. tech](degree)
+- [bca](degree)
+- [bba](degree)
+- [mba](degree)
+- [bca](degree)
+- [mca](degree)
+- [mpharm](degree)
+- [bpharm](degree)
+- [m.pharm](degree:mpharm)
+- [b.pharm](degree:bpharm)
+- [bpt](degree)
+- [bachelor of physiotherapy](degree:bpt)
+- [bachelor in physiotherapy](degree:bpt)
+- [diploma](degree)
+- [postgraduate diploma](degree:pgd)
+
+
+
+
+- [Bachelor of Computer Applications](degree:bca)
+- [Master of Computer Applications](degree:mca)
+- [Bachelor of Business Administration](degree:bba)
+- [Master of Business Administration](degree:mba)
+
+- [undergraduate](qualification)
+- [Undergraduate](qualification:undergraduate)
+- [Bachelor](qualification:undergraduate)
+- [12th](qualification:undergraduate)
+
+- [postgraduate](qualification)
+- [post graduate](qualification:postgraduate)
+
+- [masters](qualification:postgraduate)
+- [After bachelor](qualification:postgraduate)
+- [masters](qualification:postgraduate) program
+- [bachelors](qualification:undergraduate) program
+- [medical](field)
+- [postgraduates](qualification:postgraduate)
+- [bsc nursing](degree)
+
+
+
+- [a](field:engineering)
+- [A](field:engineering)
+- [science](field:engineering)
+- [b](field:medical)
+- [B](field:medical)
+- [general stream](field:commerce)
+- [Commerce](field:commerce)
+
+- [engineering](field)
+- [pharmacy](field)
+- [physiotherapy](field:physio)
+- [physio](field)
+- [management](field)
+- [computer applications](field)
+- [computer application](field:computer applications)
+- [applied sciences](field)
+- [Paramedical sciences](field)
+- [nursing](field)
+- [medical](field)
+
+
+
 - [Chandubhai S Patel Institute of Technology](institute)
 - [Chandubhai S Patel](institute:Chandubhai S Patel Institute of Technology)
 - [CSPIT](institute:Chandubhai S Patel Institute of Technology)
 - [cspit](institute:Chandubhai S Patel Institute of Technology)
-- [depstar](institute)
-- [Devang Patel Institute of Advance Technology and Research](institute:depstar)
+
 - [DEPSTAR](institute:depstar)
+- [Devang Patel Institute of Advance Technology and Research](institute:depstar)
 - [Devang Patel](institute:depstar)
+
+- [CMPICA](institute:cmpica)
+- [Chandaben Mohanbhai Patel Institute of Computer Applications](institute:cmpica)
+
+- [I2IM](institute:i2im)
+- [Indukaka Ipcowala Institute of Management](institute:i2im)
+
+- [I square I am](institute:i2im)
+- [I square I m](institute:i2im)
+
+- [PDPIAS](institute:pdpias)
+- [P D Patel Institute of Applied Sciences](institute:pdpias)
+
+- [boys](sex:boy)
+- [boy](sex)
+- [Male](sex:boy)
+- [girls](sex:girl)
+- [girl](sex:girl)
+- [female](sex:girl)
+
+
 - [Charotar University of science and technology](university)
 - [CHARUSAT](university:Charotar University of science and technology)
-- [CHANGA College](university)
-- [boys](hostel)
-- [boy](hostel:boys)
-- [Boy](hostel:boys)
-- [Boys](hostel:boys)
-- [Male](hostel:boys)
-- [male](hostel:boys)
-- [girls](hostel)
-- [girl](hostel:girls)
-- [Girls](hostel:girls)
-- [Girl](hostel:girls)
-- [female](hostel:girls)
-- [Female](hostel:girls)
-- [cmpica](institute)
-- [CMPICA](institute:cmpica)
-- [arip](institute)
-- [ARIP](institute:arip)
-- [Ashok & Rita Patel Institute of Physiotherapy](institute:arip)
-- [Chandaben Mohanbhai Patel Institute of Computer Applications](institute:cmpica)
-- [i2im](institute)
-- [I2im](institute:i2im)
-- [Indukaka Ipcowala Institute of Management](institute:i2im)
-- [pdpias](institute)
-- [PDPIAS](institue:pdpias)
-- [P D Patel Institute of Applied Sciences](institute:pdpias)
-- [cips](institute)
-- [CIPS](institute:cips)
-- [Charotar institute of paramedical sciences](institute:cips)
-- [mtin](institute)
-- [MTIN](institur:mtin)
-- [Manikaka Topawala Institute of Nursing](institute:mtin)
-- [rpcp](institute)
-- [RPCP](institute:rpcp)
-- [Ramanbhai Patel College of Pharmacy](institute:rpcp)
+- [CHANGA Collge](university)
+
+- [ahmedabad](location)
+- [ahm](location:ahmedabad)
+- [vadodara](location)
+- [baroda](location:vadodara)
+- [anand](location)
+- [vvnagar](location)
+- [vallabh vidhyanagar](location:vvnagar)
+- [vallabhvidhyanagr](location:vvnagar)
+- [nadiad](location)
 
 ## synonym:Chandubhai S Patel Institute of Technology
 - Chandubhai S Patel
