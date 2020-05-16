@@ -11,4 +11,4 @@ policies:
   - name: MappingPolicy
   - name: FormPolicy
   - name: TwoStageFallbackPolicy
-    nlu_threshold: 0.1
+    nlu_threshold: 0.2

@@ -1,0 +1,491 @@
+{
+	"university":{
+
+		"name":"CHARUSAT",
+		"courses":{
+			"engineering":{
+				"CSPIT":{
+					"btech":{
+						"ce":{
+							"name":"Computer Engineering",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						},
+						"ec":{
+							"name":"Electronica and Communication",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						},
+						"me":{
+							"name":"Mechanical Engineering",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						},
+						"cl":{
+							"name":"Civil Engineering",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						},
+						"it":{
+							"name":"Information and technology",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						},
+						"ee":{
+							"name":"Electrical Engineering",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						}
+					},
+					"mtech":{
+						"ce":{
+							"name":"Computer Engineering",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"cse":{
+							"name":"CSE",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"esvd":{
+							"name":"Embedded System and VLSI Design [esvd]",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"ict":{
+							"name":"ICT",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"cadm":{
+							"name":"Computer Aided Design and Manufacturing [cadm]",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"te":{
+							"name":"Thermal Engineering [te]",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"amt":{
+							"name":"Advanced Manufacturing Technology [amt]",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"se":{
+							"name":"Structural Engineering [se]",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						},
+						"peep":{
+							"name":"Power Electronics, Electrical PowerSystem [peep]",
+							"fees":"1,59,000",
+							"level":"postgraduate"
+						}
+					},
+					"phd":{
+						"techAndengg":{
+							"name":"Technology and Engineering",
+							"fees":"40,000",
+							"level":"postgraduate"
+						}
+					}
+				},
+				"DEPSTAR":{
+					"btech":{
+						"cse":{
+							"name":"Computer Science and Engineering",
+							"fees":"98,000",
+							"level":"undergraduate"
+						},
+						"cs":{
+							"name":"Computer Science",
+							"fees":"98,000",
+							"level":"undergraduate"
+						},
+						"it":{
+							"name":"Information Technology",
+							"fees":"98,000",
+							"level":"undergraduate"
+						}
+					}	
+				}	
+			},
+			"pharmacy":{
+				"RPCP":{
+					"bpharm":{
+						"bpharm":{
+							"name":"Bachelor of Pharmacy",
+							"fees":"1,30,000",
+							"level":"undergraduate"
+						}
+					},
+					"mpharm":{
+						"pt":{
+							"name":"Pharmaceutical Technology",
+							"fees":"1,89,000",
+							"level":"postgraduate"
+						},
+						"ra":{
+							"name":"Regulatory Affairs",
+							"fees":"1,89,000",
+							"level":"postgraduate"
+						},
+						"pqa":{
+							"name":"Pharmaceutical Quality Assurance",
+							"fees":"1,89,000",
+							"level":"postgraduate"
+						},
+						"cp":{
+							"name":"Clinical Pharmacy",
+							"fees":"1,89,000",
+							"level":"postgraduate"
+						},
+						"pc":{
+							"name":"Pharmacology",
+							"fees":"1,30,000",
+							"level":"postgraduate"
+						}						
+					},
+					"pgd":{
+						"costech":{
+							"name":"Cosmetic Technology",
+							"fees":"1,55,000",
+							"level":"postgraduate"
+						},
+						"packtech":{
+							"name":"Packaging Technology",
+							"fees":"1,55,000",
+							"level":"postgraduate"
+						}
+					},
+					"phd":{
+						"pharmacy":{
+							"name":"Pharmacy",
+							"fees":"40,000",
+							"level":"postgraduate"
+						}
+					}
+				}
+			},
+			"physio":{
+				"ARIP":{
+					"bpt":{
+						"bpt":{
+							"name":"Bachelor in Physiotherapy",
+							"fees":"1,55,000",
+							"level":"undergraduate"
+						}
+					},
+					"mpt":{
+						"ms":{
+							"name":"Musculoskeletal Sciences",
+							"fees":"2,00,000",
+							"level":"postgraduate"
+						},
+						"ns":{
+							"name":"Neurological Sciences",
+							"fees":"2,00,000",
+							"level":"postgraduate"
+						},
+						"carp":{
+							"name":"Cardiopulmonary Sciences",
+							"fees":"2,00,000",
+							"level":"postgraduate"
+						},
+						"pae":{
+							"name":"Paediatrics",
+							"fees":"2,00,000",
+							"level":"postgraduate"
+						},
+						"rehab":{
+							"name":"Rehabilitation",
+							"fees":"2,00,000",
+							"level":"postgraduate"
+						},
+						"wh":{
+							"name":"Woman's Health",
+							"fees":"2,00,000",
+							"level":"postgraduate"
+						}
+					}
+				}
+			},
+			"nursing":{
+				"MTIN":{
+					"bsc nursing":{
+						"gn":{
+							"name":"B.Sc nursing",
+							"fees":"1,48,000",
+							"level":"undergraduate"
+						}
+					},
+					"msc":{
+						"msn":{
+							"name":"Medical-Surgical Nursing [msn]",
+							"fees":"1,92,000",
+							"level":"postgraduate"
+						},
+						"ch":{
+							"name":"Community Health [ch]",
+							"fees":"1,92,000",
+							"level":"postgraduate"
+						},
+						"mh":{
+							"name":"Mental Health [mh]",
+							"fees":"1,92,000",
+							"level":"postgraduate"
+						},
+						"og":{
+							"name":"Obstetrics & Gynecological [og]",
+							"fees":"1,92,000",
+							"level":"postgraduate"
+						},
+						"chh":{
+							"name":"Child Health [chh]",
+							"fees":"1,92,000",
+							"level":"postgraduate"
+						},
+						"mlt":{
+							"name":"Medical Laboratory Technology [mlt]",
+							"fees":"60,000",
+							"level":"postgraduate"
+						}
+					},
+					"diploma":{
+						"gnm":{
+							"name":"General Nursing & Midwifery [gnm]",
+							"fees":"1,00,000",
+							"level":"undergraduate"
+						}
+					},
+					"pgd":{
+						"ha":{
+							"name":"Hospital Administration [ha]",
+							"fees":"17,000",
+							"level":"postgraduate"
+						},
+						"mlt":{
+							"name":"Medical Laboratory Technology [mlt]",
+							"fees":"20,000",
+							"level":"postgraduate"
+						},
+						"ch":{
+							"name":"Clinical Hypnosis [ch]",
+							"fees":"45,000",
+							"level":"postgraduate"
+						}
+					}
+				}		
+			},
+			"computer applications":{
+				"CMPICA":{
+					"bca":{
+						"ca":{
+							"name":"Bachelor of Computer Applications",
+							"fees":"35,000",
+							"level":"undergraduate"
+						}
+					},
+					"mca":{
+						"ca":{
+							"name":"Master of Computer Applications",
+							"fees":"1,15,000",
+							"level":"postgraduate"
+						}
+					},
+					"bsc":{
+						"it":{
+							"name":"Bachelor of Science in IT [it]",
+							"fees":"30,000",
+							"level":"undergraduate"
+						}
+					},
+					"msc":{
+						"it":{
+							"name":"Master of Science in IT [it]",
+							"fees":"60,000",
+							"level":"postgraduate"
+						}
+					},
+					"pgd":{
+						"pgdca":{
+							"name":"Post Graduate diploma in Computer Application [PGDCA]",
+							"fees":"60,000",
+							"level":"postgraduate"
+						}
+					},
+					"phd":{
+						"computer applications":{
+							"name":"computer applications",
+							"fees":"40,000",
+							"level":"postgraduate"
+						}
+					}
+				}
+			},
+			"management":{
+				"i2im":{
+					"bba":{
+						"bba":{
+							"name":"Bachelor of Business Administration",
+							"fees":"50,000",
+							"level":"undergraduate"
+							}
+					},
+					"mba":{
+						"mba":{
+							"name":"Master of Business Administration",
+							"fees":"1,29,000",
+							"level":"postgraduate"
+						}
+					},
+					"pgd":{
+						"pgdm":{
+							"name":"Post Graduate diploma in Management",
+							"fees":"1,29,000",
+							"level":"postgraduate"
+						}
+					}
+				}
+			},
+			"paramedical sciences":{
+				"CIPS":{
+					"bsc":{
+						"mrit":{
+							"name":"Medical Radiology and Imaging Technology [mrit]",
+							"fees":"60,000",
+							"level":"undergraduate"
+						},
+						"otat":{
+							"name":"Operation Theater and Anesthesia Technology [otat]",
+							"fees":"40,000",
+							"level":"undergraduate"
+						},
+						"opto":{
+							"name":"Optometry [opto]",
+							"fees":"1,00,000",
+							"level":"undergraduate"
+						},
+						"mt":{
+							"name":"Medical Technology [mt]",
+							"fees":"60,000",
+							"level":"undergraduate"
+						}
+					},
+					"msc":{
+						"mlt":{
+							"name":"Medical Laboratory Technology [mlt]",
+							"fees":"60,000",
+							"level":"postgraduate",
+							"degree":"msc"
+						}
+
+					},
+					"pgd":{
+						"ha":{
+							"name":"Hospital Administration [ha]",
+							"fees":"17,000",
+							"level":"postgraduate"
+						},
+						"mlt":{
+							"name":"Medical Laboratory Technology [mlt]",
+							"fees":"20,000",
+							"level":"postgraduate"
+						},
+						"ch":{
+							"name":"Clinical Hypnosis [ch]",
+							"fees":"45,000",
+							"level":"postgraduate"
+						}
+					}	
+				}
+			},
+			"applied sciences":{
+				"PDPIAS":{
+					"bsc":{
+						"bt":{
+							"name":"Biotechnology [bt]",
+							"fees":"45,000",
+							"level":"undergraduate",
+							"degree":"bsc"
+						},
+						"mb":{
+							"name":"Microbiology [mb]",
+							"fees":"45,000",
+							"level":"undergraduate",
+							"degree":"bsc"
+						},
+						"bc":{
+							"name":"Biochemistry [bc]",
+							"fees":"45,000",
+							"level":"undergraduate",
+							"degree":"bsc"
+						},
+						"physics":{
+							"name":"Physics",
+							"fees":"45,000",
+							"level":"undergraduate",
+							"degree":"bsc"
+						}
+					},
+					"msc":{
+						"mb":{
+							"name":"Microbiology [mb]",
+							"fees":"75,000",
+							"level":"postgraduate"
+						},
+						"bc":{
+							"name":"Biochemistry [bc]",
+							"fees":"75,000",
+							"level":"postgraduate"
+						},
+						"physics":{
+							"name":"Physics",
+							"fees":"55,000",
+							"level":"postgraduate"
+						},
+						"aoc":{
+							"name":"Advanced Organic Chemistry [aoc]",
+							"fees":"65,000",
+							"level":"postgraduate"
+						},
+						"maths":{
+							"name":"Mathematics [maths]",
+							"fees":"40,000",
+							"level":"postgraduate"
+						}
+					},
+					"phd":{
+						"chs":{
+							"name":"Chemical Science [chs]",
+							"fees":"40,000",
+							"level":"postgraduate"
+						},
+						"phs":{
+							"name":"Physical Sciences [phs]",
+							"fees":"40,000",
+							"level":"postgraduate"
+						},
+						"bs":{
+							"name":"biological science [bs]",
+							"fees":"40,000",
+							"level":"postgraduate"
+						},
+						"maths":{
+							"name":"Mathematics [maths]",
+							"fees":"40,000",
+							"level":"postgraduate"
+						},
+						"health sciences":{
+							"name":"Health sciences [hs]",
+							"fees":"40,000",
+							"level":"postgraduate"
+						}
+					}
+				}
+			}	
+		}
+	}
+}
