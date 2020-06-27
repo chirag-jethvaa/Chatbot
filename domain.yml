@@ -80,6 +80,7 @@ intents:
   - placement_info
   - why_charusat
   - achievements
+  - placement_info_companies
 
 
 actions:
@@ -128,6 +129,7 @@ actions:
 - utter_placement_statistics_pdpias
 - utter_placement_statistics_cmpica
 - utter_placement_statistics_i2im
+- utter_placement_companies
 
 
 templates:
@@ -319,11 +321,13 @@ templates:
       \ prepared according to the marks obtained by the applicants. Application form\
       \ for BBA/Dual Degree course are to be downloaded from the University website,\
       \ forms are also available during office hours at CMPICA, Changa."
+
   utter_adm_bscit_undergraduate:
   - text: A Student must have passed the 12th standard (or equivalent) examination(Science
       stream (with A or B group)) with English as a subject (Preferable in First Attempt).Admission
       of 60 seats in BSC. IT course is done on the basis of merit list prepared according
       to the marks obtained by the applicants.
+
   utter_adm_computeraplication_undergraduate:
   - text: A Student must have passed the 12th standard (or equivalent) examination(Commerce/Science(with
       A or B group)) with English as a subject (Preferable in First Attempt). Admission
@@ -332,6 +336,7 @@ templates:
       be done in Science stream.Application form for BCA/Dual Degree course are to
       be downloaded from the University website, forms are also available during office
       hours at CMPICA, Changa.
+      
   utter_adm_engineering_undergraduate:
   - text: "I. Eligibility Criteria - As per ACPC \n    1. 10 + 2 Pattern and Std.\
       \ 12th from Science Stream.\n    2. Candidate should appear in GUJCET of the\
@@ -366,6 +371,7 @@ templates:
       \ Education Courses.\n    Accordingly, 85% seats fill up by Admission Committee\
       \ for Professional Medical Educational Courses and 15% seats will be filled\
       \ by University. These 15% seats are filled up under Management quota."
+
   utter_adm_pharmacy_undergraduate:
   - text: "I. Eligibility Criteria - As per ACPC\n    1. 10 + 2 Pattern and Std. 12th\
       \ from Science Stream.\n    2. Candidate should appear in GUJCET of the current\
@@ -375,13 +381,13 @@ templates:
       \ admission is on merit basis."
 
   utter_other_field:
-    - text: "Please check our website for this information"
+    - text: "Sorry for the incovenience. Please check our website for this information."
 
   utter_about_events:
   - text: "Many Technical As Well As Non-Technical Events Are Held at CHARUSAT. \n\
       \ Cognizance \n Spoural \n Evlanch for pharmacy dept. \n Convegno for BBA/MBA\
       \ dept. \n Ignite for BCA/MCA dept. \n"
-
+ 
   utter_about_Abd:
   - text: "The distance from Ahmedabad is around 70 kms and transportation is provided\
       \ by the following travels \n 1. Ajitnath travels - 9687524830 \n 2. Brahmani\
@@ -419,7 +425,7 @@ templates:
           \ Also CHARUSAT is specially famous for Applied Sciences programs"
 
   utter_why_charusat:
-  - text: "CHARUSAT has one of the largest campus areawise among Gujarat. CHARUSAT feeds their students with social ethics..."
+  - text: "CHARUSAT has one of the largest campus areawise among Gujarat. CHARUSAT feeds their students with social ethics...Students gets acheieving, competitive environemtn here."
 
   utter_placement_statistics_CE:
   - text: "Placement Statistics in {course} department is 100%"
@@ -437,3 +443,6 @@ templates:
   - text: "Placement Statistics in {field} is 80%"
   utter_placement_statistics_i2im:
   - text: "placement Statistics in {field} is 100%"
+
+  utter_placement_companies:
+  - text: "Here, at charusat, very prestigious companies like TCS, Byju's, Capgemini, Meditab, Crestdata, L&T and many more visists for placement."

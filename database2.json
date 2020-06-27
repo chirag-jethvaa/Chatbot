@@ -7,39 +7,39 @@
 				"CSPIT":{
 					"btech":{
 						"ce":{
-							"name":"Computer Engineering",
+							"name":"Computer Engineering [ce]",
 							"fees":"1,30,000",
 							"level":"undergraduate"
 						},
 						"ec":{
-							"name":"Electronica and Communication",
+							"name":"Electronics and Communication [ec]",
 							"fees":"1,30,000",
 							"level":"undergraduate"
 						},
 						"me":{
-							"name":"Mechanical Engineering",
+							"name":"Mechanical Engineering [me]",
 							"fees":"1,30,000",
 							"level":"undergraduate"
 						},
 						"cl":{
-							"name":"Civil Engineering",
+							"name":"Civil Engineering [cl]",
 							"fees":"1,30,000",
 							"level":"undergraduate"
 						},
 						"it":{
-							"name":"Information and technology",
+							"name":"Information and technology [it]",
 							"fees":"1,30,000",
 							"level":"undergraduate"
 						},
 						"ee":{
-							"name":"Electrical Engineering",
+							"name":"Electrical Engineering [ee]",
 							"fees":"1,30,000",
 							"level":"undergraduate"
 						}
 					},
 					"mtech":{
 						"ce":{
-							"name":"Computer Engineering",
+							"name":"Computer Engineering [ce]",
 							"fees":"1,59,000",
 							"level":"postgraduate"
 						},
@@ -85,8 +85,8 @@
 						}
 					},
 					"phd":{
-						"techAndengg":{
-							"name":"Technology and Engineering",
+						"tee":{
+							"name":"Technology and Engineering [tee]",
 							"fees":"40,000",
 							"level":"postgraduate"
 						}
@@ -123,46 +123,46 @@
 					},
 					"mpharm":{
 						"pt":{
-							"name":"Pharmaceutical Technology",
+							"name":"Pharmaceutical Technology [pt]",
 							"fees":"1,89,000",
 							"level":"postgraduate"
 						},
 						"ra":{
-							"name":"Regulatory Affairs",
+							"name":"Regulatory Affairs [ra]",
 							"fees":"1,89,000",
 							"level":"postgraduate"
 						},
 						"pqa":{
-							"name":"Pharmaceutical Quality Assurance",
+							"name":"Pharmaceutical Quality Assurance [pqa]",
 							"fees":"1,89,000",
 							"level":"postgraduate"
 						},
 						"cp":{
-							"name":"Clinical Pharmacy",
+							"name":"Clinical Pharmacy [cp]",
 							"fees":"1,89,000",
 							"level":"postgraduate"
 						},
 						"pc":{
-							"name":"Pharmacology",
+							"name":"Pharmacology [pc]",
 							"fees":"1,30,000",
 							"level":"postgraduate"
 						}						
 					},
 					"pgd":{
 						"costech":{
-							"name":"Cosmetic Technology",
+							"name":"Cosmetic Technology [costech]",
 							"fees":"1,55,000",
 							"level":"postgraduate"
 						},
 						"packtech":{
-							"name":"Packaging Technology",
+							"name":"Packaging Technology [packtech]",
 							"fees":"1,55,000",
 							"level":"postgraduate"
 						}
 					},
 					"phd":{
 						"pharmacy":{
-							"name":"Pharmacy",
+							"name":"phd pharmacy",
 							"fees":"40,000",
 							"level":"postgraduate"
 						}
@@ -173,39 +173,39 @@
 				"ARIP":{
 					"bpt":{
 						"bpt":{
-							"name":"Bachelor in Physiotherapy",
+							"name":"Bachelor in Physiotherapy [bpt]",
 							"fees":"1,55,000",
 							"level":"undergraduate"
 						}
 					},
 					"mpt":{
 						"ms":{
-							"name":"Musculoskeletal Sciences",
+							"name":"Musculoskeletal Sciences [ms]",
 							"fees":"2,00,000",
 							"level":"postgraduate"
 						},
 						"ns":{
-							"name":"Neurological Sciences",
+							"name":"Neurological Sciences [ns]",
 							"fees":"2,00,000",
 							"level":"postgraduate"
 						},
 						"carp":{
-							"name":"Cardiopulmonary Sciences",
+							"name":"Cardiopulmonary Sciences [carp]",
 							"fees":"2,00,000",
 							"level":"postgraduate"
 						},
 						"pae":{
-							"name":"Paediatrics",
+							"name":"Paediatrics [pae]",
 							"fees":"2,00,000",
 							"level":"postgraduate"
 						},
 						"rehab":{
-							"name":"Rehabilitation",
+							"name":"Rehabilitation [rehab]",
 							"fees":"2,00,000",
 							"level":"postgraduate"
 						},
 						"wh":{
-							"name":"Woman's Health",
+							"name":"Woman's Health [wh]",
 							"fees":"2,00,000",
 							"level":"postgraduate"
 						}
@@ -283,7 +283,7 @@
 				"CMPICA":{
 					"bca":{
 						"ca":{
-							"name":"Bachelor of Computer Applications",
+							"name":"Bachelor of Computer Applications [bca]",
 							"fees":"35,000",
 							"level":"undergraduate"
 						}
@@ -318,7 +318,7 @@
 					},
 					"phd":{
 						"computer applications":{
-							"name":"computer applications",
+							"name":"phd in computer applications",
 							"fees":"40,000",
 							"level":"postgraduate"
 						}
@@ -329,14 +329,14 @@
 				"i2im":{
 					"bba":{
 						"bba":{
-							"name":"Bachelor of Business Administration",
+							"name":"Bachelor of Business Administration [bba]",
 							"fees":"50,000",
 							"level":"undergraduate"
 							}
 					},
 					"mba":{
 						"mba":{
-							"name":"Master of Business Administration",
+							"name":"Master of Business Administration [mba]",
 							"fees":"1,29,000",
 							"level":"postgraduate"
 						}
@@ -478,7 +478,7 @@
 							"fees":"40,000",
 							"level":"postgraduate"
 						},
-						"health sciences":{
+						"hs":{
 							"name":"Health sciences [hs]",
 							"fees":"40,000",
 							"level":"postgraduate"
