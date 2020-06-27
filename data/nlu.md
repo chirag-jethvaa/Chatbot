@@ -106,61 +106,41 @@
 
 ##intent: about_university
 - What is the informations you have about [Charotar University of science and technology](university) university?
-- Tell me something about [charusat](university).
-- What do you know about [Charusat](university) university?
-- What can I have for [CHARUSAT](university) university?
-- What is [CHARUSAT](university)?
-
-
+- Tell me something about charusat
+- What do you know about Charusat university?
+- What can I get from you about charusat
+- What is charusat?
+- Tell me about charusat
 
 ## intent: available_programs
-- Which programs are provided at [CHARUSAT](university)?
+- CHARUSAT offers programs like
+- which courses are available?
+- Which programs are provided at CHARUSAT?
+- which courses are available at charusat?
+- What are the courses available at charusat?
 - What are the programs available at [CHARUSAT](university)?
+- Which programs are available for [mtech](degree) students
+- What are the courses available in [btech](degree) program?
+- Programs available for [btech](degree) students
+- programs for [bca](degree) students
 - Tell me about the programs available at CHARUSAT.
 - Tell me the programs available at [CHAROTAR UNIVERSITY OF SCIENCE OF TECHNOLOGY](university).
-- What are the courses available at charusat?
-- which courses are available at charusat?
-- which courses are available?
-- CHARUSAT offers programs like
-- Programs available for [btech](degree) students
-- Which programs are available for [mtech](degree) students
-- programs for [bca](degree) students
-- What are the courses available in [btech](degree) program?
 - Tell me about courses provided by [Charotar University of science and technology](university)
-- Which programs are provided at charusat for [undergraduate](qualification) students of [A](field:engineering) group students?
 - Programs available for [commerce](field:commerce) students after [bachelor](qualification)?
-- What are the programs available for [12th](qualification) students?
-- What are the programs available after [12th](qualification) at charusat? 
-- Tell me about the programs available at [RPCP](institute).
-- programs offered by [RPCP](institute)
-- [CSPIT](institute) offeres different programs like
-- Which are the programs programs provided by [CSPIT](institute)?
-- [DEPSTAR](institute) offers programs
-- Which programs are available at [I2IM](institute)?
-- Can I see which courses are available at [Devang Patel](institute)?
-- Can I see which are the courses are available at [CHARUSAT](university)?
-- Tell me about the courses available at [CSPIT](institute)
-- [CHARUSAT](university) provides courses like
-- [Devang Patel](institute) provides courses like
-- [CSPIT](institute) provides courses like
-- courses avalilable at [CSPIT](institute)
-- courses avalilable at [Chandubhai S Patel Institute of Technology](institute)
-- Which courses are available at [depstar](institute)
-- What are the courses available for [b](field:medical) students of [bachelors](qualification) at [DEPSTAR](institute:depstar)?
+- What are the programs available for [12th](qualification:undergraduate) students?
+- What are the programs available after [12th](qualification:undergraduate) at charusat? 
+- Which courses are available for [undergraduates](qualification:undergraduate) of [engineering](field) students?
 - Which are the programs available at [RPCP](institute) for [b](field:medical), [masters](qualification) students?
-- What about [B](field:medical) group?
-- What about [Devang Patel](institute:depstar)
 - What are the courses available for [undergraduate](qualification) of [physio](field)?
-
-
-
+- Which are the programs available for [management](field) students?
+- Which programs are provided at charusat for [undergraduate](qualification) students of [A](field:engineering) group students?
+- Programs available for [b](field:medical) students
 
 ## intent: fees
 - How much fees are needed to be paid?
 - Tell me the fees for?
 - How much I have to pay to take an admission in this course?
-- What if i do [computer engineering](course) from [depstar](institute)?
-- What is the fee for [Pharmacy](course:pharmacy) in [rpcp](institute)?
+- What is the fee for [Pharmacy](course:pharmacy)?
 - How much fees for [computer engineering](course:ce)?
 - Fees for [cse](course)?
 - How much money I have to pay for this course?
@@ -240,6 +220,7 @@
 - Which labs are available at charusat?
 - lab facilities available at charusat
 - lab facilities
+- lab info
 - What are the labs available for [civil engineering](course:cl)?
 - what are the labs available for [cse](course) branch
 
@@ -347,6 +328,15 @@
 - Placement scenario in [management](field)
 - Placement info for [civil](course:cl) students
 
+##intent: placement_info_companies
+- What are the companies visits for placement at charusat
+- Which are the companies visits for placement
+- What are the companies come for placement at charusat
+- Which companies visists for placement
+- visiting companies for placement at charusat
+- Which prestigious companies visits for placement at charusat
+- Companies visiting for placement
+
 
 ## intent: why_charusat
 - Why should I take admission in CHARUSAT
@@ -368,7 +358,6 @@
 - Different rankings of charusat
 
 ## intent: inform
-
 - [cs](course)
 - [computer](course:ce)
 - [Computer Science](course:cs)
@@ -389,7 +378,8 @@
 - [Electrical Engineering](course:ee)
 - [electrical](course:ee)
 - [ee](course)
-- [Technology and Engineering](course:techAndengg)
+- [Technology and Engineering](course:tee)
+- [tee](course)
 
 - [Power Electronics, Electrical PowerSystem](course:peep)
 - [peep](course)
@@ -404,6 +394,7 @@
 - [Embedded System and VLSI Design](course:esvd)
 - [esvd](course)
 - [ICT](course:ict)
+- [ict](course)
 - [CSE](course:cse)
 
 - [Bachelor of Pharmacy](course:bpharm)
@@ -475,8 +466,6 @@
 - [physics](course)
 - [Advanced Organic Chemistry](course:aoc)
 - [aoc](course)
-- [general nursing](course:gn)
-- [gn](course)
 - [Chemical Science](course:chs)
 - [chs](course)
 - [Physical Sciences](course:phs)
@@ -485,6 +474,19 @@
 - [bs](course)
 - [health sciences](course:hs)
 - [hs](course)
+- [Bachelor of Computer Applications](degree:bca)
+- [Master of Computer Applications](degree:mca)
+- [Bachelor of Business Administration](degree:bba)
+- [Master of Business Administration](degree:mba)
+- [post graduate diploma in management](course:pgdm)
+- [Packaging Technology](course:packtech)
+- [packtech](course)
+- [Cosmetic Technology](course:costech)
+- [costech](course)
+- [bbax](course)
+- [mbax](course)
+- [PGDCA](course:pgdca)
+- [pgdca](course)
 
 
 - [btech](degree)
@@ -512,42 +514,23 @@
 - [bpt](degree)
 - [diploma](degree)
 - [postgraduate diploma](degree:pgd)
-
-
-
-
-- [Bachelor of Computer Applications](course:bca)
-- [Master of Computer Applications](course:mca)
-- [Bachelor of Business Administration](course:bba)
-- [Master of Business Administration](course:mba)
-- [post graduate diploma in management](course:pgdm)
-- [Packaging Technology](course:packtech)
-- [packtech](course)
-- [Cosmetic Technology](course:costech)
-- [costech](course)
+- [B.sc nursing](degree: bsc nursing)
+- [bsc nursing](degree)
+- [bachelor in physiotherapy](degree:bpt)
 
 - [undergraduate](qualification)
 - [Undergraduate](qualification:undergraduate)
 - [Bachelor](qualification:undergraduate)
 - [12th](qualification:undergraduate)
-
 - [postgraduate](qualification)
 - [post graduate](qualification:postgraduate)
-
 - [masters](qualification:postgraduate)
 - [After bachelor](qualification:postgraduate)
 - [masters](qualification:postgraduate) program
 - [bachelors](qualification:undergraduate) program
-- [medical](field)
 - [postgraduates](qualification:postgraduate)
-- [bsc nursing](degree)
-- [bbax](course)
-- [mbax](course)
-- [PGDCA](course:pgdca)
-- [pgdca](course)
-- [bachelor in physiotherapy](course:bpt)
 
-
+- [medical](field)
 - [a](field:engineering)
 - [A](field:engineering)
 - [science](field:engineering)
@@ -555,7 +538,6 @@
 - [B](field:medical)
 - [general stream](field:commerce)
 - [Commerce](field:commerce)
-
 - [engineering](field)
 - [pharmacy](field)
 - [physiotherapy](field:physio)
@@ -596,11 +578,6 @@
 - [girls](sex:girl)
 - [girl](sex:girl)
 - [female](sex:girl)
-
-
-- [Charotar University of science and technology](university)
-- [CHARUSAT](university:Charotar University of science and technology)
-- [CHANGA Collge](university)
 
 - [ahmedabad](location)
 - [ahm](location:ahmedabad)

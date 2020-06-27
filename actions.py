@@ -36,6 +36,7 @@ programCodes=[]
 placementCodes=[]
 AdmissionCodes=[]
 feesCodes=[]
+labCodes=[]
 
 data={}
 
@@ -51,6 +52,8 @@ def fCode(code):
     feesCodes.append(code)
 def ACode(code):
     AdmissionCodes.append(code)
+def lCode(code):
+    labCodes.append(code)
 def last(t):
     entities=t.latest_message['entities']
     if entities:
@@ -90,9 +93,9 @@ def available_programs_d(c,d):
                     for courseName in c[field][institute][degree]:
                         courseDetails=c[field][institute][degree][courseName]
                         if degree=="pgd":
-                            message=message+courseDetails['name']+" "+"with fees: "+courseDetails['fees']+"\n"
+                            message=message+"Course name: "+courseDetails['name']+", Fees: "+courseDetails['fees']+"\n"
                         else:
-                            message=message+courseDetails['name']+"\n"
+                            message=message+"Course name: "+courseDetails['name']+", Fees: "+courseDetails['fees']+"\n"
     return message
 
 def fees_qc(c,q,co):
@@ -104,7 +107,7 @@ def fees_qc(c,q,co):
                     if courseName==co:
                         courseDetails=c[field][institute][degree][courseName]
                         if courseDetails['level']==q:
-                            message=message+courseDetails['fees']+"\n"
+                            message=message+"Course name: "+courseDetails['name']+", Fees: "+courseDetails['fees']+"\n"
     return message
 
 def fees_dc(c,d,co):
@@ -116,7 +119,7 @@ def fees_dc(c,d,co):
                     for courseName in c[field][institute][degree]:
                         if courseName==co:
                             courseDetails=c[field][institute][degree][courseName]
-                            message=message+courseDetails['fees']+"\n"
+                            message=message+"Course name: "+courseDetails['name']+", Fees: "+courseDetails['fees']+"\n"
     return message
 
 def fees_d(c,d):
@@ -130,8 +133,21 @@ def fees_d(c,d):
                         if degree=="btech":
                             message=message+institute+", "+"with fees: "+courseDetails['fees']+"\n"
                         else:
-                            message=message+courseDetails['fees']+"\n"
+                            message=message+"Course name: "+courseDetails['name']+" Fees: "+courseDetails['fees']+"\n"
                         break
+    return message
+def fees_dp(c,d,co):
+    message=""
+    for field in coursesRoot:
+        for institute in c[field]:
+            for degree in c[field][institute]:
+                if degree==d:
+                    for courseName in c[field][institute][degree]:
+                        courseDetails=c[field][institute][degree][courseName]
+                        if co==None:
+                            message=message+"Course name: "+courseDetails['name']+" Fees: "+courseDetails['fees']+"\n"
+                        if courseName==co:
+                            message=message+"Course name: "+courseDetails['name']+" Fees: "+courseDetails['fees']+"\n"
     return message
 
 
@@ -302,9 +318,13 @@ class ActionFeesWithCourse(FormAction):
             m=""
             m=fees_dc(coursesRoot,tracker.get_slot('degree'),tracker.get_slot('course'))
             dispatcher.utter_message(m)
-        elif feesCodes[-1]=='d':
+        elif feesCodes[-1]=='d' and tracker.get_slot('degree')!="phd":
             m=""
             m=fees_d(coursesRoot,tracker.get_slot('degree'))
+            dispatcher.utter_message(m)
+        elif feesCodes[-1]=='d' and tracker.get_slot('degree')=="phd":
+            m=""
+            m=fees_dp(coursesRoot,tracker.get_slot('degree'),tracker.get_slot('course'))
             dispatcher.utter_message(m)
         return []
 
@@ -342,36 +362,115 @@ class Actiononlab(FormAction):
         return "form_lab_info"
     @staticmethod
     def required_slots(tracker:Tracker)-> List[Text]:
-        if tracker.get_slot('course'):
-            print('c')
-            return ['course']
-        elif tracker.get_slot('field')=="engineering":
-            print('engg')
-            return ["course",'field']
-        elif tracker.get_slot('field')=="pharmacy" or tracker.get_slot('field')=="physiotherapy": 
-            print('ph or pharmacy')
-            return ['field']
+        last(tracker)
+        latest_entities=tracker.latest_message['entities']
+
+        if latest_entities:
+            for entity in latest_entities:
+                if entity['entity']=="field":
+                    f=tracker.get_slot('field')
+                    if f=="engineering":
+                        lCode('f')
+                        return ['course','field']
+
+                    elif f=="pharmacy" or f=="physio":
+                        lCode('f')
+                        return ['field']
+
+                    else:
+                        if all_entites3:
+                            if all_entites3[-1]=="field":
+                                f=tracker.get_slot('field')
+                                if f=="engineering":
+                                    lCode('f')
+                                    return ['course','field']
+                                elif f=="pharmacy" or f=="physio":
+                                    lCode('f')
+                                    return ['field']
+                                else:
+                                    lCode('f')
+                                    return ['field']
+                            elif all_entites3[-1]=="course":
+                                lCode('c')
+                                return ['course']
+                            else:
+                                lCode('f')
+                                return ['field']
+
+                elif entity['entity']=="course":
+                    lCode('c')
+                    return ['course']
+
+                elif all_entites3:
+                    if all_entites3[-1]=="field":
+                        f=tracker.get_slot('field')
+                        if f=="engineering":
+                            lCode('f')
+                            return ['course','field']
+                        elif f=="pharmacy" or f=="physio":
+                            lCode('f')
+                            return ['field']
+                        else:
+                            lCode('f')
+                            return ['field']
+                    elif all_entites3[-1]=="course":
+                        lCode('c')
+                        return ['course']
+                    else:
+                        lCode('f')
+                        return ['field']
+                else:
+                    lCode('f')
+                    return ['field']
+        elif all_entites3:
+            if all_entites3[-1]=="field":
+                f=tracker.get_slot('field')
+                if f=="engineering":
+                    lCode('f')
+                    return ['course','field']
+                elif f=="pharmacy" or f=="physio":
+                    lCode('f')
+                    return ['field']
+                else:
+                    lCode('f')
+                    return ['field']
+            elif all_entites3[-1]=="course":
+                lCode('c')
+                return ['course']
+            else:
+                lCode('f')
+                return ['field']
         else:
-            print('else')
+            lCode('f')
             return ['field']
 
     def submit(self,dispatcher:CollectingDispatcher,tracker:Tracker,domain: Dict[Text, Any],)-> List[Dict]:
-        course= tracker.get_slot('course')
-        field=tracker.get_slot('field')
-        if(field=='pharmacy'):
-            dispatcher.utter_template("utter_lab_pharma",tracker)
-        elif (field == 'physiotherapy'):
-            dispatcher.utter_template('utter_lab_physio', tracker)
-        elif(course=="ce" or course=="it" or course=="cs" or course=="cse"):
-            dispatcher.utter_template("utter_lab_ce_it",tracker)
-        elif(course=='me'):
-            dispatcher.utter_template('utter_lab_mech',tracker)
-        elif(course=='cl'):
-            dispatcher.utter_template('utter_lab_civil',tracker)
-        elif (course == 'ec'):
-            dispatcher.utter_template('utter_lab_ec', tracker)
-        elif (course == 'ee'):
-            dispatcher.utter_template('utter_lab_electrical', tracker)
+        if labCodes[-1]=='c':
+            course= tracker.get_slot('course')
+            if(course=="ce" or course=="it" or course=="cs" or course=="cse"):
+                dispatcher.utter_template("utter_lab_ce_it",tracker)
+            elif(course=='me'):
+                dispatcher.utter_template('utter_lab_mech',tracker)
+            elif(course=='cl'):
+                dispatcher.utter_template('utter_lab_civil',tracker)
+            elif (course == 'ec'):
+                dispatcher.utter_template('utter_lab_ec', tracker)
+            elif (course == 'ee'):
+                dispatcher.utter_template('utter_lab_electrical', tracker)
+            else:
+                dispatcher.utter_template('utter_other_field', tracker)
+
+        elif labCodes[-1]=="f":
+            field=tracker.get_slot('field')
+            if(field=='pharmacy'):
+                dispatcher.utter_template("utter_lab_pharma",tracker)
+            elif (field == 'physiotherapy'):
+                dispatcher.utter_template('utter_lab_physio', tracker)
+            else:
+                dispatcher.utter_template('utter_other_field', tracker)
+        else:
+            dispatcher.utter_template('utter_other_field', tracker)
+
         return []
 
     def slot_mapping(self)->Dict[Text, Union[Dict, List[Dict]]]:
@@ -589,9 +688,6 @@ class ActionPlacement(FormAction):
         latest_entities=tracker.latest_message['entities']
         if latest_entities:
             for entity in latest_entities:
-                if entity['entity']=='course':
-                    plCode('c')
-                    return ['course']
                 if entity['entity']=='field':
                     if tracker.get_slot('field')=="engineering":
                         plCode('cf')
@@ -599,6 +695,9 @@ class ActionPlacement(FormAction):
                     else:
                         plCode('f')
                         return ["field"]
+                elif entity['entity']=='course':
+                    plCode('c')
+                    return ['course']
                 else:
                     if all_entites3:
                         if all_entites3[-1]=="field":
@@ -608,6 +707,9 @@ class ActionPlacement(FormAction):
                             else:
                                 plCode('f')
                                 return ["field"]
+                        elif all_entites3[-1]=="course":
+                            plCode('c')
+                            return ['course']
                         else:
                             plCode('f')
                             return ["field"]
@@ -615,7 +717,7 @@ class ActionPlacement(FormAction):
                         plCode('f')
                         return ["field"]
 
-        if all_entites3:
+        elif all_entites3:
             if all_entites3[-1]=="field":
                 if tracker.get_slot('field')=="engineering":
                     plCode('cf')
@@ -623,6 +725,9 @@ class ActionPlacement(FormAction):
                 else:
                     plCode('f')
                     return ["field"]
+            elif all_entites3[-1]=="course":
+                plCode('c')
+                return ["course"]
             else:
                 plCode('f')
                 return ["field"]
@@ -634,13 +739,18 @@ class ActionPlacement(FormAction):
         print("placementCode: ",placementCodes[-1])
         field = tracker.get_slot('field')
         course = tracker.get_slot('course')
-        if (field == "computer applications"):
-            dispatcher.utter_template('utter_placement_statistics_cmpica', tracker)
-        elif (field == "applied sciences"):
-            dispatcher.utter_template('utter_placement_statistics_pdpias', tracker)
-        elif(field=="management"):
-            dispatcher.utter_template('utter_placement_statistics_i2im',tracker)
-        elif placementCodes[-1]=='c':
+        if placementCodes[-1]=="f":
+            if (field == "computer applications"):
+                dispatcher.utter_template('utter_placement_statistics_cmpica', tracker)
+            elif (field == "applied sciences"):
+                dispatcher.utter_template('utter_placement_statistics_pdpias', tracker)
+            elif(field=="management"):
+                dispatcher.utter_template('utter_placement_statistics_i2im',tracker)
+            else:
+                dispatcher.utter_message("Sorry we don't have any information about this. Please contact ")
+
+        elif placementCodes[-1]=='c' or placementCodes[-1]=="cf":
+
             if (course == "ce" or course == "it" or course == "cs"):
                 dispatcher.utter_template("utter_placement_statistics_CE", tracker)
             elif (course == 'me'):
@@ -655,6 +765,7 @@ class ActionPlacement(FormAction):
                 dispatcher.utter_message("Sorry we don't have any information about this. Please contact ")
         else:
             dispatcher.utter_message("Sorry we don't have any information about this. Please contact ")
+
         return []
 
     def slot_mapping(self)->Dict[Text, Union[Dict, List[Dict]]]:
