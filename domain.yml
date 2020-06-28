@@ -95,7 +95,7 @@ actions:
 - utter_ask_institute
 - utter_ask_course
 - utter_other_field
-
+- action_custom_fallback
 - utter_ask_qualification
 - utter_about_university
 - utter_ask_field
@@ -130,6 +130,7 @@ actions:
 - utter_placement_statistics_cmpica
 - utter_placement_statistics_i2im
 - utter_placement_companies
+- action_default_ask_affirmation
 
 
 templates:
@@ -164,7 +165,9 @@ templates:
   - text: May you rephrase the question?
   - text: Sorry, didn't understood. Please rephrase the question.
   - text: Please repeat the question.
+  - text: Please rephrase the question
   - text: What??? Please repharse the question, I didn't understood.
+
 
   utter_response_to_bad:
   - text: "Sorry, I will try to improve myself."
@@ -446,3 +449,32 @@ templates:
 
   utter_placement_companies:
   - text: "Here, at charusat, very prestigious companies like TCS, Byju's, Capgemini, Meditab, Crestdata, L&T and many more visists for placement."
+
+  utter_ask_affirmation:
+  - text: "Sorry I am bit confused. please select any of the below topic you want to discover about CHARUSAT."
+    buttons:
+    - title: "Available Programs"
+      payload: '/available_programs'
+    - title: "Fees"
+      payload: '/fees'
+    - title: "Admission process"
+      payload: '/admission_process'
+    - title: "Available Hostels"
+      payload: '/about_hostel'
+    - title: "Communication to CHARUSAT"
+      payload: '/commute'
+    - title: "About Labs"
+      payload: '/lab_info'
+    - title: "About Placement"
+      payload: '/placement_info'
+    - title: "Companies visiting for placement"
+      payload: '/placement_info_companies'
+    - title: "Events at Charusat"
+      payload: '/events'
+    - title: "Why Charusat???"
+      payload: '/why_charusat'
+    - title: "Out of scope"
+      payload: '/out_of_scope'
+
+  utter_ask_rephrase:
+  - text: "Please rephrase the question" 

@@ -12,3 +12,5 @@ policies:
   - name: FormPolicy
   - name: TwoStageFallbackPolicy
     nlu_threshold: 0.2
+    fallback_nlu_action_name: "action_custom_fallback"
+    deny_suggestion_intent_name: "out_of_scope"

@@ -12,7 +12,7 @@ from typing import Any, Text, Dict, List, Union
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, UserUtteranceReverted
 import json
 
 #
@@ -464,7 +464,7 @@ class Actiononlab(FormAction):
             field=tracker.get_slot('field')
             if(field=='pharmacy'):
                 dispatcher.utter_template("utter_lab_pharma",tracker)
-            elif (field == 'physiotherapy'):
+            elif (field == 'physio'):
                 dispatcher.utter_template('utter_lab_physio', tracker)
             else:
                 dispatcher.utter_template('utter_other_field', tracker)
@@ -597,7 +597,7 @@ class ActionAdmission(FormAction):
             qualification=tracker.get_slot('qualification')
             if(field=='pharmacy' and qualification=='undergraduate'):
                 dispatcher.utter_template('utter_adm_pharmacy_undergraduate',tracker)
-            elif((field=='physiotherapy' and qualification=='undergraduate') or (field=='nursing' and qualification=='undergraduate')):
+            elif((field=='physio' and qualification=='undergraduate') or (field=='nursing' and qualification=='undergraduate')):
                 dispatcher.utter_template('utter_adm_nursing/physio_undergraduate',tracker)
             elif(field=='engineering' and qualification=='undergraduate'):
                 dispatcher.utter_template('utter_adm_engineering_undergraduate',tracker)
@@ -773,3 +773,19 @@ class ActionPlacement(FormAction):
             "course":self.from_entity(entity="course",intent="inform"),
             "field":self.from_entity(entity="field",intent="inform")
         }
+
+class ActionCustomFallback(Action):
+    def name(self):
+        return "action_custom_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any], ) -> List[Dict]:
+        dispatcher.utter_message("Fallback action called")
+        return [UserUtteranceReverted()]
+
+class ActionCustomFallbackAffirmation(Action):
+    def name(self):
+        return "action_default_ask_affirmation"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any], ) -> List[Dict]:
+        dispatcher.utter_template('utter_ask_affirmation',tracker)
+        return [UserUtteranceReverted()]
