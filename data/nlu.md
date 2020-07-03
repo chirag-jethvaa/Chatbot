@@ -87,8 +87,6 @@
 - extremely sad
 - so sad
 
-
-
 ## intent:i_am_robot
 - Who are you?
 - What's your name?
@@ -96,8 +94,6 @@
 - Tell me your name.
 - Your name?
 - Who the fuck are you?
-
-
 
 ##intent:chirag
 - hello chirag

@@ -158,7 +158,7 @@ class ActionHelloWorldProgram(Action):
     def run(self, dispatcher: CollectingDispatcher,
       tracker: Tracker,
       domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-    	dispatcher.utter_message("Hello World Chirag!")
+    	dispatcher.utter_message("Hello World!")
     	return []
         
 
@@ -307,6 +307,40 @@ class ActionFeesWithCourse(FormAction):
             #print("fees with q,c called")
             return ["qualification","course"]
 
+    @staticmethod
+    def course_db() -> List[Text]:
+        return [
+            "ce",
+            "computer",
+            "computer engineering",
+            "computerengineering",
+            "me",
+            "mechanical",
+            "mechanical engineering",
+            "mechanicalengineering",
+            "civil",
+            "civil engineering",
+            "civilengineering",
+            "it",
+            "information technology",
+            "ec",
+            "electronics and communication",
+            "cse",
+            "computer science",
+            "computer science and engineering",
+            "cs",
+            "bba",
+            "bca",
+            "mba"
+        ]
+
+    def validate_course(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if value.lower() in self.course_db():
+            return {"course": value}
+        else:
+            dispatcher.utter_template("utter_wrong_course", tracker)
+            return {"course": None}
 
     def submit(self,dispatcher:CollectingDispatcher,tracker:Tracker,domain: Dict[Text, Any],)-> List[Dict]:
         #print("FeesCodes:",feesCodes)
@@ -443,6 +477,38 @@ class Actiononlab(FormAction):
         else:
             lCode('f')
             return ['field']
+
+    @staticmethod
+    def course_db() -> List[Text]:
+        return [
+            "ce",
+            "computer",
+            "computer engineering",
+            "computerengineering",
+            "me",
+            "mechanical",
+            "mechanical engineering",
+            "mechanicalengineering",
+            "civil",
+            "civil engineering",
+            "civilengineering",
+            "it",
+            "information technology",
+            "ec",
+            "electronics and communication",
+            "cse",
+            "cs",
+            "computer science",
+            "computer science and engineering",
+        ]
+
+    def validate_course(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if value.lower().strip() in self.course_db():
+            return {"course": value}
+        else:
+            dispatcher.utter_template("utter_wrong_course", tracker)
+            return {"course": None}
 
     def submit(self,dispatcher:CollectingDispatcher,tracker:Tracker,domain: Dict[Text, Any],)-> List[Dict]:
         if labCodes[-1]=='c':
@@ -590,6 +656,73 @@ class ActionAdmission(FormAction):
             #print("fees with q,c called")
             return ["degree"]
 
+    @staticmethod
+    def course_db() -> List[Text]:
+        return [
+            "ce",
+            "computer",
+            "computer engineering",
+            "computerengineering",
+            "me",
+            "mechanical",
+            "mechanical engineering",
+            "mechanicalengineering",
+            "civil",
+            "civil engineering",
+            "civilengineering",
+            "it",
+            "information technology",
+            "ec",
+            "electronics and communication",
+            "cse",
+            "computer science",
+            "cs",
+            "computer science and engineering",
+            "cl",
+            "electrical engineering",
+            "ee"
+        ]
+    @staticmethod
+    def field_db()->List[Text]:
+        return[
+            "engineering",
+            "pharmacy",
+            "physio",
+            "management",
+            "computer applications"
+        ]
+    @staticmethod
+    def degree_db()->List[Text]:
+        return[
+            "bpharm",
+            "btech",
+            "bpt",
+            "bba",
+            "bca"
+        ]
+
+    def validate_degree(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if value.lower().strip() in self.degree_db():
+            return {"degree": value}
+        else:
+            dispatcher.utter_template("utter_wrong_degree", tracker)
+            return {"degree": None}
+
+    def validate_course(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if value.lower().strip() in self.course_db():
+            return {"course": value}
+        else:
+            dispatcher.utter_template("utter_wrong_course", tracker)
+            return {"course": None}
+
+    def validate_field(self,value: Text,dispatcher: CollectingDispatcher,tracker:Tracker,domain:Dict[Text,Any])->Dict[Text,Any]:
+        if value.lower() in self.field_db():
+            return {"field":value}
+        else:
+            dispatcher.utter_template("utter_wrong_field",tracker)
+            return{"field":None}
 
     def submit(self,dispatcher:CollectingDispatcher,tracker:Tracker,domain: Dict[Text, Any],)-> List[Dict]:
         if(AdmissionCodes[-1]=='qf'):
@@ -747,7 +880,7 @@ class ActionPlacement(FormAction):
             elif(field=="management"):
                 dispatcher.utter_template('utter_placement_statistics_i2im',tracker)
             else:
-                dispatcher.utter_message("Sorry we don't have any information about this. Please contact ")
+                self.validate_course()
 
         elif placementCodes[-1]=='c' or placementCodes[-1]=="cf":
 
@@ -762,17 +895,45 @@ class ActionPlacement(FormAction):
             elif (course == 'ee'):
                 dispatcher.utter_template('utter_placement_statistics_Electrical', tracker)
             else:
-                dispatcher.utter_message("Sorry we don't have any information about this. Please contact ")
+                self.validate_course()
         else:
-            dispatcher.utter_message("Sorry we don't have any information about this. Please contact ")
-
+            self.validate_course()
         return []
 
-    def slot_mapping(self)->Dict[Text, Union[Dict, List[Dict]]]:
-        return{
-            "course":self.from_entity(entity="course",intent="inform"),
-            "field":self.from_entity(entity="field",intent="inform")
-        }
+    @staticmethod
+    def course_db() -> List[Text]:
+        return [
+            "ce",
+            "computer",
+            "computer engineering",
+            "computerengineering",
+            "me",
+            "mechanical",
+            "mechanical engineering",
+            "mechanicalengineering",
+            "civil",
+            "civil engineering",
+            "civilengineering",
+            "it",
+            "information technology",
+            "ec",
+            "electronics and communication",
+            "cse",
+            "computer science",
+            "computer science and engineering",
+            "cs",
+            "electrical engineering",
+            "ee"
+        ]
+
+    def validate_course(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if value.lower() in self.course_db():
+            return {"course": value}
+        else:
+            dispatcher.utter_template("utter_wrong_course",tracker)
+            return {"course": None}
+
 
 class ActionCustomFallback(Action):
     def name(self):

@@ -1,88 +1,375 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- agree
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- i_am_robot
+- chirag
+- available_programs
+- available_courses
+- fees
+- inform
+- about_university
+- out_of_scope
+- about_hostel
+- available_programs_with_institute
+- internet_info
+- lab_info
+- food_availability
+- admission_process
+- praising
+- developer
+- bad_about_chatbot
+- events
+- commute
+- placement_info
+- why_charusat
+- achievements
+- placement_info_companies
+entities:
+- institute
+- course
+- university
+- qualification
+- field
+- degree
+- sex
+- location
 slots:
-
-  qualification:
-    type: unfeaturized
-
-  institute:
-    type: unfeaturized
-
-  course:
-    type: unfeaturized
-
-  university:
-    type: unfeaturized
-
   LINK:
     type: unfeaturized
-
-  field:
+  course:
     type: unfeaturized
-
   degree:
     type: unfeaturized
-
-  sex:
-    type: unfeaturized
-
   feesCode:
     type: unfeaturized
-
+  field:
+    type: unfeaturized
+  institute:
+    type: unfeaturized
   location:
     type: unfeaturized
-
-entities:
-  - institute
-  - course
-  - university
-  - qualification
-  - field
-  - degree
-  - sex
-  - location
-
-
-forms:
-  - form_programs
-  - form_fees
-  - form_about_hostels
-  - form_lab_info
-  - form_about_admission
-  - form_about_locat
-  - form_about_placement
-
-intents:
-  - greet
-  - agree
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - i_am_robot
-  - chirag
-  - available_programs
-  - available_courses
-  - fees
-  - inform
-  - about_university
-  - out_of_scope
-  - about_hostel
-  - available_programs_with_institute
-  - internet_info
-  - lab_info
-  - food_availability
-  - admission_process
-  - praising
-  - developer
-  - bad_about_chatbot
-  - events
-  - commute
-  - placement_info
-  - why_charusat
-  - achievements
-  - placement_info_companies
-
-
+  qualification:
+    type: unfeaturized
+  sex:
+    type: unfeaturized
+  university:
+    type: unfeaturized
+responses:
+  utter_available_programs_with_institute:
+  - image: ./hist.png
+    text: Program with institute uttered.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Is it okay?
+  utter_happy:
+  - text: Great carry on!
+  utter_goodbye:
+  - text: Bye
+  - text: Bye. Ask me anytime, anything about CHARUSAT. I will be there for you.
+  - text: Have a nice day.
+  - text: Okay, bye.
+  - text: See you later.
+  - text: GoodBye.
+  utter_out_of_scope:
+  - text: Sorry, I can’t handle that request.
+  - text: May you rephrase the question?
+  - text: Sorry, didn't understood. Please rephrase the question.
+  - text: Please repeat the question.
+  - text: Please rephrase the question
+  - text: What??? Please repharse the question, I didn't understood.
+  utter_response_to_bad:
+  - text: Sorry, I will try to improve myself.
+  - text: I'm so sorry. I'm very young. I will try to improve myself.
+  - text: I'm just born. Give me sometime to improve myself.
+  - text: I'm sorry.
+  - text: Sorry. Next time you will not regret.
+  utter_i_am_robot:
+  - text: I am CHARUBOT.
+  - text: You can call me CHARUBOT.
+  - text: Bot, CHARUBOT.
+  utter_thanks:
+  - text: Thanks. It is my Pleasure.
+  - text: Ohh really? I will take it as a compliment.
+  - text: Thanks.
+  - text: Thank you. Ask me if you need any help regarding CHARUSAT.
+  - text: It's my pleasure.
+  - text: Really? Thanks.
+  - text: You are very kind.
+  utter_developer:
+  - text: Aagam, Chirag, Devarsh, Jenil and Manil built me. [Studnets of CHARUSAT]
+  - text: I am built by Aagam, Chirag, Devarsh, Jenil and Manil [Studnets of CHARUSAT].
+  - text: A good team of Aagam, Chirag, Devarsh, Jenil and Manil built me.
+  utter_ask_institute:
+  - text: Please mention which institute.
+  utter_about_university:
+  - text: Charotar University of Science and Technology (CHARUSAT) is established
+      under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants
+      Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of
+      UGC Act 1956.[4][5] Earlier campus was known as Education Campus Changa until
+      2009. CHARUSAT was accredited with grade A by NAAC in 2016.
+  utter_ask_qualification:
+  - buttons:
+    - payload: '/inform{"qualification": "undergraduate"}'
+      title: undergraduate
+    - payload: '/inform{"qualification": "postgraduate"}'
+      title: postgraduate
+    text: please select/provide the level of program.
+  utter_ask_course:
+  - text: For which course?
+  utter_ask_field:
+  - buttons:
+    - payload: '/inform{"field": "engineering"}'
+      title: Engineering
+    - payload: '/inform{"field": "management"}'
+      title: Management
+    - payload: '/inform{"field": "physio"}'
+      title: Physiotherapy
+    - payload: '/inform{"field": "pharmacy"}'
+      title: Pharmacy
+    - payload: '/inform{"field": "computer applications"}'
+      title: computer applications
+    - payload: '/inform{"field": "paramedical sciences"}'
+      title: Paramedical sciences
+    - payload: '/inform{"field": "nursing"}'
+      title: Nursing
+    - payload: '/inform{"field": "medical"}'
+      title: Medical
+    - payload: '/inform{"field": "commerce"}'
+      title: Commerce
+    text: Please provide/select a field name.
+  utter_ask_degree:
+  - buttons:
+    - payload: '/inform{"degree": "btech"}'
+      title: B.Tech
+    - payload: '/inform{"degree": "mtech"}'
+      title: M.Tech
+    - payload: '/inform{"degree": "phd"}'
+      title: Ph.d
+    - payload: '/inform{"degree": "bsc"}'
+      title: B.Sc
+    - payload: '/inform{"degree": "msc"}'
+      title: M.Sc
+    - payload: '/inform{"degree": "bpt"}'
+      title: B.Pt
+    - payload: '/inform{"degree": "diploma"}'
+      title: diploma
+    - payload: '/inform{"degree": "pgd"}'
+      title: postgraduate diploma
+    text: Please select/provide degree
+  utter_ask_sex:
+  - text: Ok. then for which hostel girls or boys you want to see?
+  utter_about_girlshostel:
+  - text: Girls hostels are included inside the premises only For further info you
+      can contact -91-9925691113 / 9825293046 Thank you:) Any other information you
+      need to known..plz mention
+  utter_about_hostel:
+  - text: Here are your Lists of the boys hostels which are in walking distance to
+      charusat.. 1. Nisarg hostel -099790 99888 2. Shreedeep hostel -09727765994 3.
+      Royal care hostel -094270418184. Darshan hostel -099095 23236  5. Ashirvad hostel
+      -094265 95837 6. Sahajanand Hostel Thank you:) Any other information you need
+      to known..plz mention
+  utter_internet_info:
+  - text: charusat is providing unlimited data for students. Along with that it also
+      provides high speed data facilities like sophos is providing data with bandwidth
+      around 250 Hz. Thank you:) Any other information you need to known..plz mention
+  utter_lab_ce_it:
+  - text: AS u all known that it is very emerging field nowadays we have labs like
+      1. AR Lab  2. VR Lab  3. Mac lab and many more... Also it has research labs
+      too whom ever is interested Thank you:) Any other information you need to known..plz
+      mention
+  utter_lab_pharma:
+  - text: This is also a vast field in which it include..  1. Pharmaceutics Labs 2.
+      Pharmacology Lab  3. Biotecnology Lab  4. Pharmaceutical Analytical Lab 5. Medicinal
+      chemistry Lab etc.. Thank you:) Any other information you need to known..plz
+      mention
+  utter_lab_physio:
+  - text: In this field it includes.. 1. Motion analysis and research Lab 2. Human
+      anatomy LAb  3. Human Physiology/Physics Lab etc... It also contains  1. Dept
+      of women's health physio 2. Dept of musculoskeletal physio  3. Dept of neuro
+      physio 4. Dept of paediatric physio  5. Dept of cardiorespiratory physio 6.
+      Dept of electrotherapy  7. Dept of exercise therapy and many more... Thank you:)
+      Any other information you need to known..plz mention
+  utter_lab_mech:
+  - text: This is very vast field in which it includes.. 1. fluid mechanics Lab 2.
+      Material testing Lab  3. CAD-CAM Lab  4. Heat and Mass tranfer Lab 5. Thermal
+      Lab  6. MatLab  7. IC engine Lab and many more... Thank you:) Any other information
+      you need to known..plz mention
+  utter_lab_civil:
+  - text: It includes.. 1. Fluid Mechanics Lab  2. Material Testing Lab  3. Concrete
+      Lab  4. Hydraulic Lab 5. Surveying Lab  6. Structural engeering Lab and many
+      more... Thank you:) Any other information you need to known..plz mention
+  utter_lab_ec:
+  - text: I includes.. 1. Digital system design Lab  2. Microprocessor and interfacing
+      Lab 3. Embedded systems design with IOT Lab  4. Control system Lab Thank you:)
+      Any other information you need to known..plz mention
+  utter_lab_electrical:
+  - text: It includes..  1. Electrical machines Lab  2. Power electronics Lab  3.Electrical
+      and electronics measurements Lab 4. Power system Lab  5. Microprocessor and
+      application Lab  6. Digital electronics Lab Thank you:) Any other information
+      you need to known..plz mention
+  utter_food:
+  - text: There are many canteens available for the best food facilities like HariOm
+      ,Iceburg etc.. Thank you:) Any other information you need to known..plz mention
+  utter_adm_bba_undergraduate:
+  - text: "Eligibity criteria for BBA.\n    1. 10 + 2 Pattern and Std. 12th Commerce\
+      \ Stream.\n    2. 10 + 2 Pattern and Std. 12th Art Stream (English as subject)\n\
+      Admission of total 60 seats of BBA course is done on the basis of merit list\
+      \ prepared according to the marks obtained by the applicants. Application form\
+      \ for BBA/Dual Degree course are to be downloaded from the University website,\
+      \ forms are also available during office hours at CMPICA, Changa."
+  utter_adm_bscit_undergraduate:
+  - text: A Student must have passed the 12th standard (or equivalent) examination(Science
+      stream (with A or B group)) with English as a subject (Preferable in First Attempt).Admission
+      of 60 seats in BSC. IT course is done on the basis of merit list prepared according
+      to the marks obtained by the applicants.
+  utter_adm_computeraplication_undergraduate:
+  - text: A Student must have passed the 12th standard (or equivalent) examination(Commerce/Science(with
+      A or B group)) with English as a subject (Preferable in First Attempt). Admission
+      of 60 seats in BCA course is done on the basis of merit list prepared according
+      to the marks obtained by the applicants. For Dual Degree course 12th should
+      be done in Science stream.Application form for BCA/Dual Degree course are to
+      be downloaded from the University website, forms are also available during office
+      hours at CMPICA, Changa.
+  utter_adm_engineering_undergraduate:
+  - text: "I. Eligibility Criteria - As per ACPC \n    1. 10 + 2 Pattern and Std.\
+      \ 12th from Science Stream.\n    2. Candidate should appear in GUJCET of the\
+      \ current admission year.\n\nII. Govt. quota seats will be filled by ACPC and\
+      \ Management quota seats will be filled by University. In 25% seats, 15% seats\
+      \ are filled under NRI sponsored quota and 10% seats are filled under Management\
+      \ quota.\n\nIII. Seat Distribution\n  CSPIT:\n      Mechanical engineering -\
+      \ 90 seats  Govt. Quota,30 seats Management Quota. \n      Civil engineering\
+      \ - 90 seats  Govt. Quota,30 seats Management Quota.\n      Computer engineering\
+      \ - 90 seats  Govt. Quota,12 seats for general management Quota(10%),18 seats\
+      \ for NRI Quota(15%). \n      IT engineering - 90 seats  Govt. Quota,12 seats\
+      \ for general management Quota(10%),18 seats for NRI Quota(15%).\n      Electrical\
+      \ engineering - 90 seats  Govt. Quota,30 seats Management Quota.\n      Electrical\
+      \ and Communication engineering - 90 seats  Govt. Quota,30 seats Management\
+      \ Quota.\n  DEPSTAR:\n      Computer engineering - 90 seats  Govt. Quota,12\
+      \ seats for general management Quota(10%),18 seats for NRI Quota(15%).\n   \
+      \   Computer Science engineering - 90 seats  Govt. Quota,12 seats for general\
+      \ management Quota(10%),18 seats for NRI Quota(15%).\n      IT engineering -\
+      \ 45 seats  Govt. Quota,6 seats for general management Quota(10%),9 seats for\
+      \ NRI Quota(15%)."
+  utter_adm_nursing/physio_undergraduate:
+  - text: "I. Eligibility Criteria.\n    1. 10 + 2 Pattern and Std. 12th from Science\
+      \ Stream.\n\n\nII. Distribution of seats.\n    B.Sc (Nursing) - 45 seats Govt.\
+      \ Quota, 15 seats  Management Quota.\n    GNM - 30 seats Govt. Quota,10 seats\
+      \ Management Quota.\n    BPT - 85 seats Govt. Quota,9 seats Management Quota.\n\
+      \n\nIII. Admission Procedure.\n    Admission procedure is as per norms and rules\
+      \ defined by Admission Committee for Gujarat Professional Nursing & Allied Medical\
+      \ Education Courses, Govt. of Gujarat, Gandhinagar.\n        1. Admissions are\
+      \ on merit basis\n        2. No donation or capitation fees are demanded for\
+      \ any Admission.\n        3. Admission will be under taken as per the rules\
+      \ decided by Admission Committee for Gujarat Professional Nursing & Allied Medical\
+      \ Education Courses.\n    Accordingly, 85% seats fill up by Admission Committee\
+      \ for Professional Medical Educational Courses and 15% seats will be filled\
+      \ by University. These 15% seats are filled up under Management quota."
+  utter_adm_pharmacy_undergraduate:
+  - text: "I. Eligibility Criteria - As per ACPC\n    1. 10 + 2 Pattern and Std. 12th\
+      \ from Science Stream.\n    2. Candidate should appear in GUJCET of the current\
+      \ admission year.\n  B.Pharm total 120 seats.\n    Govt. Quota @ 75% of Intake\
+      \ - 90 seats\n    Management Quota @ 25% of Intake - 30 seats\n\n\nII. Admission\
+      \ Procedure-\n    Govt. seats will be fill up by ACPC. Management and NRI quota\
+      \ admission is on merit basis."
+  utter_other_field:
+  - text: Sorry for the incovenience. Please check our website for this information.
+  utter_about_events:
+  - text: "Many Technical As Well As Non-Technical Events Are Held at CHARUSAT. \n\
+      \ Cognizance \n Spoural \n Evlanch for pharmacy dept. \n Convegno for BBA/MBA\
+      \ dept. \n Ignite for BCA/MCA dept. \n"
+  utter_about_Abd:
+  - text: "The distance from Ahmedabad is around 70 kms and transportation is provided\
+      \ by the following travels \n 1. Ajitnath travels - 9687524830 \n 2. Brahmani\
+      \ travels -9426753509\n"
+  utter_about_Vad:
+  - text: "The distance from Vadodara is around 70 kms and transportation is provided\
+      \ by the following travels \n 1. Sunita travels - 9426561722 \n  2. Dharm bhakti\
+      \ travels 9825029502\n"
+  utter_about_Vv:
+  - text: "The distance from Vallabh Vidhyanagr is around 14 kms and transportation\
+      \ is provided by the following travels \n 1. Dhanlaxmi travels - 9426561722\
+      \ \n  2. Waiting for you travels 9825029502\n"
+  utter_about_Nad:
+  - text: Will update soon.
+  utter_about_unk_loc:
+  - text: Sorry, we do not have any transportation facility available from the mentioned
+      city. But don't worry!!! We provide hostel facilities also.
+  utter_ask_location:
+  - text: From which city you are willing to commute to CHARUSAT
+  - text: From which city you would like to communicate to CHARUSAT
+  - text: From which city you are going to commute to CHARUSAT
+  utter_achievements:
+  - text: CHARUSAT had been awarded A grade by NAAC in its first cycle in 2016. CHARUSAT
+      has been ranked in the 101–150 band among universities in India by NIRF. GSIRF
+      has given 4-star rating to CHARUSAT in 2019. CHARUSAT has been rakned under
+      top 10 universities of Gujarat in 2020. Also CHARUSAT is specially famous for
+      Applied Sciences programs
+  utter_why_charusat:
+  - text: CHARUSAT has one of the largest campus areawise among Gujarat. CHARUSAT
+      feeds their students with social ethics...Students gets acheieving, competitive
+      environemtn here.
+  utter_placement_statistics_CE:
+  - text: Placement Statistics in {course} department is 100%
+  utter_placement_statistics_ME:
+  - text: Placement Statistics in {course} department is 87%
+  utter_placement_statistics_Civil:
+  - text: Placement Statistics in Civil department is 80%
+  utter_placement_statistics_EC:
+  - text: Placement Statistics in EC department is 84.84%
+  utter_placement_statistics_Electrical:
+  - text: Placement Statistics in Electrical department is 82%
+  utter_placement_statistics_pdpias:
+  - text: Placement Statistics in {field} is 80%
+  utter_placement_statistics_i2im:
+  - text: placement Statistics in {field} is 100%
+  utter_placement_companies:
+  - text: Here, at charusat, very prestigious companies like TCS, Byju's, Capgemini,
+      Meditab, Crestdata, L&T and many more visists for placement.
+  utter_wrong_course:
+  - text: Please enter valid course name.
+  utter_wrong_degree:
+  - text: Please enter valid degree name.
+  utter_wrong_field:
+  - text: Please enter valid field name.
+  utter_ask_affirmation:
+  - buttons:
+    - payload: /available_programs
+      title: Available Programs
+    - payload: /fees
+      title: Fees
+    - payload: /admission_process
+      title: Admission process
+    - payload: /about_hostel
+      title: Available Hostels
+    - payload: /commute
+      title: Communication to CHARUSAT
+    - payload: /lab_info
+      title: About Labs
+    - payload: /placement_info
+      title: About Placement
+    - payload: /placement_info_companies
+      title: Companies visiting for placement
+    - payload: /events
+      title: Events at Charusat
+    - payload: /why_charusat
+      title: Why Charusat???
+    - payload: /out_of_scope
+      title: Out of scope
+    text: Sorry I am bit confused. please select any of the below topic you want to
+      discover about CHARUSAT.
 actions:
 - utter_greet
 - utter_cheer_up
@@ -131,350 +418,27 @@ actions:
 - utter_placement_statistics_i2im
 - utter_placement_companies
 - action_default_ask_affirmation
-
-
-templates:
-  utter_available_programs_with_institute:
-  - text: "Program with institute uttered."
-    image: "./hist.png"
-
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-  - text: "Is it okay?"
-
-  utter_happy:
-  - text: "Great carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-  - text: "Bye. Ask me anytime, anything about CHARUSAT. I will be there for you."
-  - text: "Have a nice day."
-  - text: "Okay, bye."
-  - text: "See you later."
-  - text: "GoodBye."
-
-  utter_out_of_scope:
-  - text: Sorry, I can’t handle that request.
-  - text: May you rephrase the question?
-  - text: Sorry, didn't understood. Please rephrase the question.
-  - text: Please repeat the question.
-  - text: Please rephrase the question
-  - text: What??? Please repharse the question, I didn't understood.
-
-
-  utter_response_to_bad:
-  - text: "Sorry, I will try to improve myself."
-  - text: "I'm so sorry. I'm very young. I will try to improve myself."
-  - text: "I'm just born. Give me sometime to improve myself."
-  - text: "I'm sorry."
-  - text: "Sorry. Next time you will not regret."
-
-  utter_i_am_robot:
-  - text: "I am CHARUBOT."
-  - text: "You can call me CHARUBOT."
-  - text: "Bot, CHARUBOT."
-
-  utter_thanks:
-  - text: "Thanks. It is my Pleasure."
-  - text: "Ohh really? I will take it as a compliment."
-  - text: "Thanks."
-  - text: "Thank you. Ask me if you need any help regarding CHARUSAT."
-  - text: "It's my pleasure."
-  - text: "Really? Thanks."
-  - text: "You are very kind."
-
-  utter_developer:
-    - text: "Aagam, Chirag, Devarsh, Jenil and Manil built me. [Studnets of CHARUSAT]"
-    - text: "I am built by Aagam, Chirag, Devarsh, Jenil and Manil [Studnets of CHARUSAT]."
-    - text: "A good team of Aagam, Chirag, Devarsh, Jenil and Manil built me."
-
-  utter_ask_institute:
-  - text: Please mention which institute.
-
-  utter_about_university:
-  - text: "Charotar University of Science and Technology (CHARUSAT) is established under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of UGC Act 1956.[4][5] Earlier campus was known as Education Campus Changa until 2009. CHARUSAT was accredited with grade A by NAAC in 2016."
-
-  utter_ask_qualification:
-  - text: please select/provide the level of program.
-    buttons:
-    - title: "undergraduate"
-      payload: '/inform{"qualification": "undergraduate"}'
-    - title: "postgraduate"
-      payload: '/inform{"qualification": "postgraduate"}'
-
-  utter_ask_course:
-  - text: For which course?
-
-  utter_ask_field:
-  - text: Please provide/select a field name. 
-    buttons:
-    - title: "Engineering"
-      payload: '/inform{"field": "engineering"}'
-    - title: "Management"
-      payload: '/inform{"field": "management"}'
-    - title: "Physiotherapy"
-      payload: '/inform{"field": "physio"}'
-    - title: "Pharmacy"
-      payload: '/inform{"field": "pharmacy"}'
-    - title: "computer applications"
-      payload: '/inform{"field": "computer applications"}'
-    - title: "Paramedical sciences"
-      payload: '/inform{"field": "paramedical sciences"}'
-    - title: "Nursing"
-      payload: '/inform{"field": "nursing"}'
-    - title: "Medical"
-      payload: '/inform{"field": "medical"}'
-    - title: "Commerce"
-      payload: '/inform{"field": "commerce"}'
-
-  utter_ask_degree:
-  - text: Please select/provide degree
-    buttons:
-    - title: "B.Tech"
-      payload: '/inform{"degree": "btech"}'
-    - title: "M.Tech"
-      payload: '/inform{"degree": "mtech"}'
-    - title: "Ph.d"
-      payload: '/inform{"degree": "phd"}'
-    - title: "B.Sc"
-      payload: '/inform{"degree": "bsc"}'
-    - title: "M.Sc"
-      payload: '/inform{"degree": "msc"}'
-    - title: "B.Pt"
-      payload: '/inform{"degree": "bpt"}'
-    - title: "diploma"
-      payload: '/inform{"degree": "diploma"}'
-    - title: "postgraduate diploma"
-      payload: '/inform{"degree": "pgd"}'
-
-  utter_ask_sex:
-  - text: Ok. then for which hostel girls or boys you want to see?
-
-  utter_about_girlshostel:
-  - text: "Girls hostels are included inside the premises only For further info you can contact -91-9925691113 / 9825293046
-        Thank you:) Any other information you need to known..plz mention"
-
-  utter_about_hostel:
-  - text: "Here are your Lists of the boys hostels which are in walking distance to charusat..
-       1. Nisarg hostel -099790 99888 2. Shreedeep hostel -09727765994 3. Royal care
-      hostel -094270418184. Darshan hostel -099095 23236  5. Ashirvad hostel -094265
-       95837 6. Sahajanand Hostel Thank you:) Any other information you need to known..plz mention"
-
-
-  utter_internet_info:
-  - text: "charusat is providing unlimited data for students. Along with that it also provides high speed data facilities like sophos is providing data with bandwidth around 250 Hz.
-        Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_ce_it:
-  - text: "AS u all known that it is very emerging field nowadays we have labs like
-        1. AR Lab  2. VR Lab  3. Mac lab and many more... Also it has research labs too whom ever is interested
-        Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_pharma:
-  - text: "This is also a vast field in which it include..  1. Pharmaceutics Labs
-      2. Pharmacology Lab  3. Biotecnology Lab  4. Pharmaceutical Analytical Lab
-      5. Medicinal chemistry Lab etc..
-      Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_physio:
-  - text: "In this field it includes.. 1. Motion analysis and research Lab
-          2. Human anatomy LAb  3. Human Physiology/Physics Lab etc...
-          It also contains  1. Dept of women's health physio
-          2. Dept of musculoskeletal physio  3. Dept of neuro physio
-          4. Dept of paediatric physio  5. Dept of cardiorespiratory physio
-          6. Dept of electrotherapy  7. Dept of exercise therapy and many more...
-          Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_mech:
-  - text: "This is very vast field in which it includes.. 1. fluid mechanics Lab
-         2. Material testing Lab  3. CAD-CAM Lab  4. Heat and Mass tranfer Lab
-         5. Thermal Lab  6. MatLab  7. IC engine Lab and many more...
-         Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_civil:
-  - text: "It includes.. 1. Fluid Mechanics Lab  2. Material Testing Lab  3. Concrete Lab  4. Hydraulic Lab
-          5. Surveying Lab  6. Structural engeering Lab and many more...
-          Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_ec:
-  - text: "I includes.. 1. Digital system design Lab  2. Microprocessor and interfacing Lab
-          3. Embedded systems design with IOT Lab  4. Control system Lab
-          Thank you:) Any other information you need to known..plz mention"
-
-  utter_lab_electrical:
-  - text: "It includes..  1. Electrical machines Lab  2. Power electronics Lab  3.Electrical and electronics measurements Lab
-          4. Power system Lab  5. Microprocessor and application Lab  6. Digital electronics Lab
-          Thank you:) Any other information you need to known..plz mention"
-
-  utter_food:
-  - text: "There are many canteens available for the best food facilities like HariOm ,Iceburg etc..
-         Thank you:) Any other information you need to known..plz mention"
-
-  utter_adm_bba_undergraduate:
-  - text: "Eligibity criteria for BBA.\n    1. 10 + 2 Pattern and Std. 12th Commerce\
-      \ Stream.\n    2. 10 + 2 Pattern and Std. 12th Art Stream (English as subject)\n\
-      Admission of total 60 seats of BBA course is done on the basis of merit list\
-      \ prepared according to the marks obtained by the applicants. Application form\
-      \ for BBA/Dual Degree course are to be downloaded from the University website,\
-      \ forms are also available during office hours at CMPICA, Changa."
-
-  utter_adm_bscit_undergraduate:
-  - text: A Student must have passed the 12th standard (or equivalent) examination(Science
-      stream (with A or B group)) with English as a subject (Preferable in First Attempt).Admission
-      of 60 seats in BSC. IT course is done on the basis of merit list prepared according
-      to the marks obtained by the applicants.
-
-  utter_adm_computeraplication_undergraduate:
-  - text: A Student must have passed the 12th standard (or equivalent) examination(Commerce/Science(with
-      A or B group)) with English as a subject (Preferable in First Attempt). Admission
-      of 60 seats in BCA course is done on the basis of merit list prepared according
-      to the marks obtained by the applicants. For Dual Degree course 12th should
-      be done in Science stream.Application form for BCA/Dual Degree course are to
-      be downloaded from the University website, forms are also available during office
-      hours at CMPICA, Changa.
-      
-  utter_adm_engineering_undergraduate:
-  - text: "I. Eligibility Criteria - As per ACPC \n    1. 10 + 2 Pattern and Std.\
-      \ 12th from Science Stream.\n    2. Candidate should appear in GUJCET of the\
-      \ current admission year.\n\nII. Govt. quota seats will be filled by ACPC and\
-      \ Management quota seats will be filled by University. In 25% seats, 15% seats\
-      \ are filled under NRI sponsored quota and 10% seats are filled under Management\
-      \ quota.\n\nIII. Seat Distribution\n  CSPIT:\n      Mechanical engineering -\
-      \ 90 seats  Govt. Quota,30 seats Management Quota. \n      Civil engineering\
-      \ - 90 seats  Govt. Quota,30 seats Management Quota.\n      Computer engineering\
-      \ - 90 seats  Govt. Quota,12 seats for general management Quota(10%),18 seats\
-      \ for NRI Quota(15%). \n      IT engineering - 90 seats  Govt. Quota,12 seats\
-      \ for general management Quota(10%),18 seats for NRI Quota(15%).\n      Electrical\
-      \ engineering - 90 seats  Govt. Quota,30 seats Management Quota.\n      Electrical\
-      \ and Communication engineering - 90 seats  Govt. Quota,30 seats Management\
-      \ Quota.\n  DEPSTAR:\n      Computer engineering - 90 seats  Govt. Quota,12\
-      \ seats for general management Quota(10%),18 seats for NRI Quota(15%).\n   \
-      \   Computer Science engineering - 90 seats  Govt. Quota,12 seats for general\
-      \ management Quota(10%),18 seats for NRI Quota(15%).\n      IT engineering -\
-      \ 45 seats  Govt. Quota,6 seats for general management Quota(10%),9 seats for\
-      \ NRI Quota(15%)."
-  utter_adm_nursing/physio_undergraduate:
-  - text: "I. Eligibility Criteria.\n    1. 10 + 2 Pattern and Std. 12th from Science\
-      \ Stream.\n\n\nII. Distribution of seats.\n    B.Sc (Nursing) - 45 seats Govt.\
-      \ Quota, 15 seats  Management Quota.\n    GNM - 30 seats Govt. Quota,10 seats\
-      \ Management Quota.\n    BPT - 85 seats Govt. Quota,9 seats Management Quota.\n\
-      \n\nIII. Admission Procedure.\n    Admission procedure is as per norms and rules\
-      \ defined by Admission Committee for Gujarat Professional Nursing & Allied Medical\
-      \ Education Courses, Govt. of Gujarat, Gandhinagar.\n        1. Admissions are\
-      \ on merit basis\n        2. No donation or capitation fees are demanded for\
-      \ any Admission.\n        3. Admission will be under taken as per the rules\
-      \ decided by Admission Committee for Gujarat Professional Nursing & Allied Medical\
-      \ Education Courses.\n    Accordingly, 85% seats fill up by Admission Committee\
-      \ for Professional Medical Educational Courses and 15% seats will be filled\
-      \ by University. These 15% seats are filled up under Management quota."
-
-  utter_adm_pharmacy_undergraduate:
-  - text: "I. Eligibility Criteria - As per ACPC\n    1. 10 + 2 Pattern and Std. 12th\
-      \ from Science Stream.\n    2. Candidate should appear in GUJCET of the current\
-      \ admission year.\n  B.Pharm total 120 seats.\n    Govt. Quota @ 75% of Intake\
-      \ - 90 seats\n    Management Quota @ 25% of Intake - 30 seats\n\n\nII. Admission\
-      \ Procedure-\n    Govt. seats will be fill up by ACPC. Management and NRI quota\
-      \ admission is on merit basis."
-
-  utter_other_field:
-    - text: "Sorry for the incovenience. Please check our website for this information."
-
-  utter_about_events:
-  - text: "Many Technical As Well As Non-Technical Events Are Held at CHARUSAT. \n\
-      \ Cognizance \n Spoural \n Evlanch for pharmacy dept. \n Convegno for BBA/MBA\
-      \ dept. \n Ignite for BCA/MCA dept. \n"
- 
-  utter_about_Abd:
-  - text: "The distance from Ahmedabad is around 70 kms and transportation is provided\
-      \ by the following travels \n 1. Ajitnath travels - 9687524830 \n 2. Brahmani\
-      \ travels -9426753509\n"
-  utter_about_Vad:
-  - text: "The distance from Vadodara is around 70 kms and transportation is provided\
-      \ by the following travels \n 1. Sunita travels - 9426561722 \n  2. Dharm bhakti\
-      \ travels 9825029502\n"
-
-  utter_about_Vv:
-  - text: "The distance from Vallabh Vidhyanagr is around 14 kms and transportation is provided\
-      \ by the following travels \n 1. Dhanlaxmi travels - 9426561722 \n  2. Waiting for you\
-      \ travels 9825029502\n"    
-  utter_about_And:
-  - text: "The distance from Vallabh Vidhyanagr is around 14 kms and transportation is provided\
-      \ by the following travels \n 1. Dhanlaxmi travels - 9426561722 \n  2. Waiting for you\
-      \ travels 9825029502\n" 
-
-  utter_about_Nad:
-  - text: "Will update soon."
-
-  utter_about_unk_loc:
-  - text: Sorry, we do not have any transportation facility available from the mentioned city. But don't worry!!! We provide hostel facilities also.
-  
-  utter_ask_location:
-  - text: From which city you are willing to commute to CHARUSAT
-  - text: From which city you would like to communicate to CHARUSAT
-  - text: From which city you are going to commute to CHARUSAT
-
-  utter_achievements:
-  - text: "CHARUSAT had been awarded A grade by NAAC in its first cycle in 2016.\
-          \ CHARUSAT has been ranked in the 101–150 band among universities in India by NIRF.\
-          \ GSIRF has given 4-star rating to CHARUSAT in 2019.\
-          \ CHARUSAT has been rakned under top 10 universities of Gujarat in 2020.\
-          \ Also CHARUSAT is specially famous for Applied Sciences programs"
-
-  utter_why_charusat:
-  - text: "CHARUSAT has one of the largest campus areawise among Gujarat. CHARUSAT feeds their students with social ethics...Students gets acheieving, competitive environemtn here."
-
-  utter_placement_statistics_CE:
-  - text: "Placement Statistics in {course} department is 100%"
-  utter_placement_statistics_ME:
-  - text: Placement Statistics in {course} department is 87%
-  utter_placement_statistics_Civil:
-  - text: Placement Statistics in Civil department is 80%
-  utter_placement_statistics_EC:
-  - text: Placement Statistics in EC department is 84.84%
-  utter_placement_statistics_Electrical:
-  - text: "Placement Statistics in Electrical department is 82%"
-  utter_placement_statistics_pdpias:
-  - text: "Placement Statistics in {field} is 80%"
-  utter_placement_statistics_cmpica:
-  - text: "Placement Statistics in {field} is 80%"
-  utter_placement_statistics_i2im:
-  - text: "placement Statistics in {field} is 100%"
-
-  utter_placement_companies:
-  - text: "Here, at charusat, very prestigious companies like TCS, Byju's, Capgemini, Meditab, Crestdata, L&T and many more visists for placement."
-
-  utter_ask_affirmation:
-  - text: "Sorry I am bit confused. please select any of the below topic you want to discover about CHARUSAT."
-    buttons:
-    - title: "Available Programs"
-      payload: '/available_programs'
-    - title: "Fees"
-      payload: '/fees'
-    - title: "Admission process"
-      payload: '/admission_process'
-    - title: "Available Hostels"
-      payload: '/about_hostel'
-    - title: "Communication to CHARUSAT"
-      payload: '/commute'
-    - title: "About Labs"
-      payload: '/lab_info'
-    - title: "About Placement"
-      payload: '/placement_info'
-    - title: "Companies visiting for placement"
-      payload: '/placement_info_companies'
-    - title: "Events at Charusat"
-      payload: '/events'
-    - title: "Why Charusat???"
-      payload: '/why_charusat'
-    - title: "Out of scope"
-      payload: '/out_of_scope'
-
-  utter_ask_rephrase:
-  - text: "Please rephrase the question" 
+- utter_ask_degree
+- utter_ask_sex
+- utter_about_girlshostel
+- utter_about_hostel
+- utter_adm_bba_undergraduate
+- utter_adm_bscit_undergraduate
+- utter_adm_computeraplication_undergraduate
+- utter_adm_engineering_undergraduate
+- utter_adm_nursing/physio_undergraduate
+- utter_adm_pharmacy_undergraduate
+- utter_ask_location
+- utter_ask_affirmation
+- utter_ask_rephrase
+- utter_wrong_course
+- utter_wrong_degree
+- utter_wrong_field
+forms:
+- form_programs
+- form_fees
+- form_about_hostels
+- form_lab_info
+- form_about_admission
+- form_about_locat
+- form_about_placement
